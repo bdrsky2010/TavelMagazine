@@ -19,6 +19,7 @@
 		7BBED37D2C0370210095FA9F /* Magazine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BBED37C2C0370210095FA9F /* Magazine.storyboard */; };
 		7BBED37F2C0370B40095FA9F /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED37E2C0370B40095FA9F /* MagazineTableViewController.swift */; };
 		7BBED3812C0371A10095FA9F /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */; };
+		7BBED3842C038BA40095FA9F /* KingfisherWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 7BBED3832C038BA40095FA9F /* KingfisherWebP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBED3842C038BA40095FA9F /* KingfisherWebP in Frameworks */,
 				7BBED37B2C036F940095FA9F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +104,7 @@
 			name = TavelMagazine;
 			packageProductDependencies = (
 				7BBED37A2C036F940095FA9F /* Kingfisher */,
+				7BBED3832C038BA40095FA9F /* KingfisherWebP */,
 			);
 			productName = TavelMagazine;
 			productReference = 7BBED35E2C035DDF0095FA9F /* TavelMagazine.app */;
@@ -133,6 +136,7 @@
 			mainGroup = 7BBED3552C035DDF0095FA9F;
 			packageReferences = (
 				7BBED3792C036F940095FA9F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7BBED3822C038BA40095FA9F /* XCRemoteSwiftPackageReference "KingfisherWebP" */,
 			);
 			productRefGroup = 7BBED35F2C035DDF0095FA9F /* Products */;
 			projectDirPath = "";
@@ -411,6 +415,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		7BBED3822C038BA40095FA9F /* XCRemoteSwiftPackageReference "KingfisherWebP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeatse/KingfisherWebP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -418,6 +430,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BBED3792C036F940095FA9F /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7BBED3832C038BA40095FA9F /* KingfisherWebP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BBED3822C038BA40095FA9F /* XCRemoteSwiftPackageReference "KingfisherWebP" */;
+			productName = KingfisherWebP;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
