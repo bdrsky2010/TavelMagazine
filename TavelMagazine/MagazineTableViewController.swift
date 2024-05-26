@@ -7,7 +7,6 @@
 
 import UIKit
 import Kingfisher
-//import KingfisherWebP
 
 class MagazineTableViewController: UITableViewController {
 
@@ -33,17 +32,16 @@ class MagazineTableViewController: UITableViewController {
         let url = URL(string: magazine.photo_image)
         
         cell.infoImageView.kf.indicatorType = .activity
-        cell.infoImageView.kf.setImage(with: url) { result in
+        cell.infoImageView.kf.setImage(
+            with: url,
+            options: [.cacheOriginalImage]) { result in
             switch result {
             case .success(let value):
                 print(value.image)
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
-        
-//        cell.infoImageView.kf.setImage(with: url, options: [.processor(WebPProcessor.default), .cacheSerializer(WebPSerializer.default)])
-        
         
         cell.titleLabel.text = magazine.title
         cell.subtitleLabel.text = magazine.subtitle

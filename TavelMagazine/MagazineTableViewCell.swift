@@ -26,6 +26,7 @@ class MagazineTableViewCell: UITableViewCell {
     
     private func configUI() {
         infoImageView.layer.cornerRadius = 10
+        infoImageView.contentMode = .scaleAspectFill
         
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
         
