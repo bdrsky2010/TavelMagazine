@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sxh-Cv-oV7">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Magazine Table View Controller-->
+        <scene sceneID="9Qt-kf-r6y">
+            <objects>
+                <tableViewController id="Yfw-hs-IJI" customClass="MagazineTableViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HmI-wf-CGC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MagazineTableViewCell" rowHeight="332" id="hMG-ba-wLf">
+                                <rect key="frame" x="0.0" y="50" width="393" height="332"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hMG-ba-wLf" id="ZdG-JT-yqb">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="332"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg5-8b-NP7">
+                                            <rect key="frame" x="40" y="11" width="313" height="310"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eg5-8b-NP7" firstAttribute="top" secondItem="ZdG-JT-yqb" secondAttribute="topMargin" id="F3d-DU-oBE"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="eg5-8b-NP7" secondAttribute="trailing" constant="20" id="FGv-RL-4Cg"/>
+                                        <constraint firstItem="eg5-8b-NP7" firstAttribute="leading" secondItem="ZdG-JT-yqb" secondAttribute="leadingMargin" constant="20" id="bCp-tV-ZTa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eg5-8b-NP7" secondAttribute="bottom" id="dx1-MB-zKN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yfw-hs-IJI" id="CVe-Ra-LYo"/>
+                            <outlet property="delegate" destination="Yfw-hs-IJI" id="Q7h-ny-lV5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="23n-hY-8i7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IV9-lt-SqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118.320610687023" y="64.788732394366207"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="amb-Lm-LpC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sxh-Cv-oV7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIB-JA-hPi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yfw-hs-IJI" kind="relationship" relationship="rootViewController" id="0X6-tI-iv2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74z-yo-Ga2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191.6030534351145" y="64.788732394366207"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
