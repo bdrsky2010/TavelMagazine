@@ -57,6 +57,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6CC59E2C04A4E400FBFF21 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7BBED3672C035DDF0095FA9F /* Main.storyboard */,
+				7BBED37C2C0370210095FA9F /* Magazine.storyboard */,
+				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7B6CC59F2C04A50300FBFF21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BBED3772C035E320095FA9F /* MagazineInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B6CC5A12C04A52C00FBFF21 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BBED37E2C0370B40095FA9F /* MagazineTableViewController.swift */,
+				7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */,
+				7B6CC59C2C04A3F500FBFF21 /* TravelCityViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7B6CC5A22C04A53700FBFF21 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		7BBED3552C035DDF0095FA9F = {
 			isa = PBXGroup;
 			children = (
@@ -80,17 +116,13 @@
 				7BBED3612C035DDF0095FA9F /* AppDelegate.swift */,
 				7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */,
 				7BBED3652C035DDF0095FA9F /* ViewController.swift */,
-				7BBED3672C035DDF0095FA9F /* Main.storyboard */,
-				7BBED37C2C0370210095FA9F /* Magazine.storyboard */,
-				7B6CC59C2C04A3F500FBFF21 /* TravelCityViewController.swift */,
-				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
+				7B6CC59E2C04A4E400FBFF21 /* Storyboard */,
 				7BBED36A2C035DE00095FA9F /* Assets.xcassets */,
 				7BBED36C2C035DE00095FA9F /* LaunchScreen.storyboard */,
 				7BBED36F2C035DE00095FA9F /* Info.plist */,
-				7BBED3772C035E320095FA9F /* MagazineInfo.swift */,
-				7BBED37E2C0370B40095FA9F /* MagazineTableViewController.swift */,
-				7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */,
-				7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */,
+				7B6CC59F2C04A50300FBFF21 /* Model */,
+				7B6CC5A12C04A52C00FBFF21 /* ViewController */,
+				7B6CC5A22C04A53700FBFF21 /* TableViewCell */,
 				7B6CC59A2C049DA300FBFF21 /* UIImageView+Extension.swift */,
 			);
 			path = TavelMagazine;
