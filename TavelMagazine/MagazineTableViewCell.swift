@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MagazineTableViewCell: UITableViewCell {
 
@@ -35,6 +36,14 @@ class MagazineTableViewCell: UITableViewCell {
         
         dateLabel.font = .systemFont(ofSize: 14, weight: .bold)
         dateLabel.textColor = .systemGray
+    }
+    
+    public func configCellContent(_ magazine: Magazine) {
+        infoImageView.configureImageWithKF(urlString: magazine.photo_image)
+        
+        titleLabel.text = magazine.title
+        subtitleLabel.text = magazine.subtitle
+        dateLabel.text = magazine.date.convertStrDate
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

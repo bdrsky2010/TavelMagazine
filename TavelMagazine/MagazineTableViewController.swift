@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import Kingfisher
 
 class MagazineTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,23 +28,7 @@ class MagazineTableViewController: UITableViewController {
         let index = indexPath.row
         let magazine = Magazine.magazineList[index]
         
-        let url = URL(string: magazine.photo_image)
-        
-        cell.infoImageView.kf.indicatorType = .activity
-        cell.infoImageView.kf.setImage(
-            with: url,
-            options: [.cacheOriginalImage]) { result in
-            switch result {
-            case .success(let value):
-                print(value.image)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
-        cell.titleLabel.text = magazine.title
-        cell.subtitleLabel.text = magazine.subtitle
-        cell.dateLabel.text = magazine.date.convertStrDate
+        cell.configCellContent(magazine)
         
         return cell
     }

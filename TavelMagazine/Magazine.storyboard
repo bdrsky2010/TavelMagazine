@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="1118.320610687023" y="64.788732394366207"/>
         </scene>
-        <!--View Controller-->
+        <!--Magazine View Controller-->
         <scene sceneID="Nyx-Ld-L9X">
             <objects>
-                <viewController id="krk-pD-Eea" sceneMemberID="viewController">
+                <viewController id="krk-pD-Eea" customClass="MagazineViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NT8-Cx-yej">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bUj-VI-upx"/>
+                    <connections>
+                        <outlet property="magazineTableView" destination="yzq-4X-pjf" id="MKl-kU-wXJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7g-CF-hwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
