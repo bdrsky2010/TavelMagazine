@@ -18,7 +18,15 @@ class MagazineViewController: UIViewController,
 
         navigationItem.title = "떠나보자 TRAVEL"
         
+        magazineTableView.delegate = self
+        magazineTableView.dataSource = self
         magazineTableView.rowHeight = 450
+        magazineTableView.separatorStyle = .none
+        
+        let nib = UINib(nibName: MagazineTableViewCell.reuseIdentifier,
+                        bundle: nil)
+        magazineTableView.register(nib,
+                                   forCellReuseIdentifier: MagazineTableViewCell.reuseIdentifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,23 +40,7 @@ class MagazineViewController: UIViewController,
         let index = indexPath.row
         let magazine = Magazine.magazineList[index]
         
-        let url = URL(string: magazine.photo_image)
-        
-        cell.infoImageView.kf.indicatorType = .activity
-        cell.infoImageView.kf.setImage(
-            with: url,
-            options: [.cacheOriginalImage]) { result in
-            switch result {
-            case .success(let value):
-                print(value.image)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
-        cell.titleLabel.text = magazine.title
-        cell.subtitleLabel.text = magazine.subtitle
-        cell.dateLabel.text = magazine.date.convertStrDate
+        cell.configCellContent(magazine)
         
         return cell
     }
