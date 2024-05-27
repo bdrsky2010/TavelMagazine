@@ -19,6 +19,7 @@ class CityDetailInfoViewController: UIViewController,
         super.viewDidLoad()
 
         navigationItem.title = "도시 상세 정보"
+        cityTableView.separatorStyle = .none
         
         cityTableView.delegate = self
         cityTableView.dataSource = self

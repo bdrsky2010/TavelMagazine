@@ -20,7 +20,6 @@ class AdvertiseTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         selectionStyle = .none
-        
         configureUI()
         configureCellContent()
     }
