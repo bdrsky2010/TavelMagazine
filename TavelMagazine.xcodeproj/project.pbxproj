@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */; };
+		7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */; };
 		7BBED3622C035DDF0095FA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3612C035DDF0095FA9F /* AppDelegate.swift */; };
 		7BBED3642C035DDF0095FA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */; };
 		7BBED3662C035DDF0095FA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3652C035DDF0095FA9F /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineViewController.swift; sourceTree = "<group>"; };
+		7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MagazineTableViewCell.xib; sourceTree = "<group>"; };
 		7BBED35E2C035DDF0095FA9F /* TavelMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TavelMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBED3612C035DDF0095FA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,11 +78,13 @@
 				7BBED3652C035DDF0095FA9F /* ViewController.swift */,
 				7BBED3672C035DDF0095FA9F /* Main.storyboard */,
 				7BBED37C2C0370210095FA9F /* Magazine.storyboard */,
+				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
 				7BBED36A2C035DE00095FA9F /* Assets.xcassets */,
 				7BBED36C2C035DE00095FA9F /* LaunchScreen.storyboard */,
 				7BBED36F2C035DE00095FA9F /* Info.plist */,
 				7BBED3772C035E320095FA9F /* MagazineInfo.swift */,
 				7BBED37E2C0370B40095FA9F /* MagazineTableViewController.swift */,
+				7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */,
 				7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */,
 			);
 			path = TavelMagazine;
@@ -153,6 +159,7 @@
 				7BBED36B2C035DE00095FA9F /* Assets.xcassets in Resources */,
 				7BBED36E2C035DE00095FA9F /* Base in Resources */,
 				7BBED3692C035DDF0095FA9F /* Base in Resources */,
+				7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */,
 				7BBED37F2C0370B40095FA9F /* MagazineTableViewController.swift in Sources */,
 				7BBED3662C035DDF0095FA9F /* ViewController.swift in Sources */,
 				7BBED3782C035E320095FA9F /* MagazineInfo.swift in Sources */,
