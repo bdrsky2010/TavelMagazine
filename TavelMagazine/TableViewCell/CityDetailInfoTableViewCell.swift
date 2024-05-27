@@ -23,6 +23,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        configureUI()
     }
     
     private func configureUI() {
@@ -34,7 +35,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         titleLabel.font = .systemFont(ofSize: 17, weight: .bold)
         titleLabel.textColor = .label
         
-        subtitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
+        subtitleLabel.font = .systemFont(ofSize: 13, weight: .bold)
         subtitleLabel.textColor = .systemGray
         subtitleLabel.numberOfLines = 0
         
@@ -47,7 +48,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         thumbnailImageView.layer.cornerRadius = 10
     }
     
-    private func configureCellContent(_ travel: Travel) {
+    public func configureCellContent(_ travel: Travel) {
         titleLabel.text = travel.title
         subtitleLabel.text = travel.description
         

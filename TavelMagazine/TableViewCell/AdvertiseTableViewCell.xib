@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,9 +16,68 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8h-ZZ-x1k">
+                        <rect key="frame" x="20" y="0.0" width="280" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하와이 여행은 가고싶다면?  수업이 있는데 가실 생각은 아니시죠?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47e-F3-NPm">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="70"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-2U-Dkj">
+                                <rect key="frame" x="243" y="2" width="35" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4a-Xn-KDL">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="h4a-Xn-KDL" firstAttribute="top" secondItem="RC0-2U-Dkj" secondAttribute="top" id="7H4-O8-Miw"/>
+                                    <constraint firstAttribute="height" constant="25" id="BFj-5b-Ro0"/>
+                                    <constraint firstItem="h4a-Xn-KDL" firstAttribute="leading" secondItem="RC0-2U-Dkj" secondAttribute="leading" id="IGZ-5V-SFz"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4a-Xn-KDL" secondAttribute="trailing" id="k3D-VM-3pF"/>
+                                    <constraint firstAttribute="bottom" secondItem="h4a-Xn-KDL" secondAttribute="bottom" id="zKK-R8-7sr"/>
+                                    <constraint firstAttribute="width" constant="35" id="zxO-8G-DTM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="47e-F3-NPm" secondAttribute="bottom" id="BPA-qA-5On"/>
+                            <constraint firstAttribute="trailing" secondItem="47e-F3-NPm" secondAttribute="trailing" id="aHe-ic-hlL"/>
+                            <constraint firstItem="47e-F3-NPm" firstAttribute="leading" secondItem="S8h-ZZ-x1k" secondAttribute="leading" id="cTK-kR-lTx"/>
+                            <constraint firstItem="RC0-2U-Dkj" firstAttribute="top" secondItem="S8h-ZZ-x1k" secondAttribute="top" constant="2" id="fVJ-7G-SIo"/>
+                            <constraint firstAttribute="trailing" secondItem="RC0-2U-Dkj" secondAttribute="trailing" constant="2" id="ueR-dy-qM8"/>
+                            <constraint firstItem="47e-F3-NPm" firstAttribute="top" secondItem="S8h-ZZ-x1k" secondAttribute="top" id="zB2-Ym-jz0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S8h-ZZ-x1k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4HZ-8w-YQG"/>
+                    <constraint firstAttribute="bottom" secondItem="S8h-ZZ-x1k" secondAttribute="bottom" id="CDg-aD-18a"/>
+                    <constraint firstAttribute="trailing" secondItem="S8h-ZZ-x1k" secondAttribute="trailing" constant="20" id="bL4-bJ-8cL"/>
+                    <constraint firstItem="S8h-ZZ-x1k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rAu-kP-urK"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adCellView" destination="S8h-ZZ-x1k" id="rHY-TS-UPq"/>
+                <outlet property="adDescriptionLabel" destination="47e-F3-NPm" id="Hxu-r5-Atg"/>
+                <outlet property="adTitleLabel" destination="h4a-Xn-KDL" id="69y-uq-aDJ"/>
+                <outlet property="adTitleView" destination="RC0-2U-Dkj" id="FjO-gZ-cQp"/>
+            </connections>
             <point key="canvasLocation" x="138.93129770992365" y="29.577464788732396"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
