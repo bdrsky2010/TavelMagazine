@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityDetailInfoTableViewCell" rowHeight="150" id="XaT-0m-ekr" customClass="CityDetailInfoTableViewCell" customModule="TavelMagazine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XaT-0m-ekr" id="IOR-DM-p90">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-ms-Th9">
+                        <rect key="frame" x="294.66666666666669" y="16" width="98.333333333333314" height="118"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="철도 박물관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSM-fA-HqJ">
+                        <rect key="frame" x="0.0" y="15.999999999999998" width="77.666666666666671" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일본 철도의 역사를 둘러볼 수 있는 박물관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9Q-Xd-xIY">
+                        <rect key="frame" x="0.0" y="36.333333333333336" width="274.66666666666669" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ME2-G6-jje">
+                        <rect key="frame" x="0.0" y="62.333333333333343" width="83" height="15"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n23-Vq-7xy">
+                                <rect key="frame" x="0.0" y="-0.33333333333333215" width="15" height="14.666666666666666"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n23-Vq-7xy" secondAttribute="height" id="W5a-Da-6TF"/>
+                                    <constraint firstAttribute="width" constant="15" id="yCm-Kd-BGT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xzh-tZ-jNf">
+                                <rect key="frame" x="17" y="0.99999999999999645" width="15" height="13.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="LcC-k2-wgL"/>
+                                    <constraint firstAttribute="width" secondItem="Xzh-tZ-jNf" secondAttribute="height" multiplier="11:10" id="dJ6-7G-c55"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2GK-HO-KtN">
+                                <rect key="frame" x="34" y="0.99999999999999645" width="15" height="13.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="9WC-fT-luw"/>
+                                    <constraint firstAttribute="width" secondItem="2GK-HO-KtN" secondAttribute="height" multiplier="11:10" id="dpU-p6-o6h"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.leadinghalf.filled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wju-hb-b8L">
+                                <rect key="frame" x="51" y="0.99999999999999645" width="15" height="13.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="7Qt-YA-1fN"/>
+                                    <constraint firstAttribute="width" secondItem="Wju-hb-b8L" secondAttribute="height" multiplier="11:10" id="sVg-ly-xAb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-Qz-VdM">
+                                <rect key="frame" x="68" y="0.99999999999999645" width="15" height="13.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="52I-Ky-yMB"/>
+                                    <constraint firstAttribute="width" secondItem="yaT-Qz-VdM" secondAttribute="height" multiplier="11:10" id="o0L-Lc-z7a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="83" id="Sjg-kb-EAe"/>
+                            <constraint firstItem="2GK-HO-KtN" firstAttribute="width" secondItem="n23-Vq-7xy" secondAttribute="width" id="Yox-Dr-bgC"/>
+                            <constraint firstItem="Xzh-tZ-jNf" firstAttribute="width" secondItem="n23-Vq-7xy" secondAttribute="width" id="fT2-GC-vOS"/>
+                            <constraint firstItem="yaT-Qz-VdM" firstAttribute="width" secondItem="n23-Vq-7xy" secondAttribute="width" id="mmH-aG-oNZ"/>
+                            <constraint firstItem="Wju-hb-b8L" firstAttribute="width" secondItem="n23-Vq-7xy" secondAttribute="width" id="usX-FU-Jtn"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(3.3) ∙ 저장 239" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7d-zB-aeG">
+                        <rect key="frame" x="87" y="62.333333333333336" width="92" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Svf-19-lhg">
+                        <rect key="frame" x="355.66666666666669" y="26.000000000000004" width="29.333333333333314" height="26.333333333333339"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Svf-19-lhg" secondAttribute="height" id="fyA-2D-GUM"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v7d-zB-aeG" firstAttribute="top" secondItem="ME2-G6-jje" secondAttribute="top" id="171-qx-PG7"/>
+                    <constraint firstItem="Svf-19-lhg" firstAttribute="top" secondItem="bxv-ms-Th9" secondAttribute="top" constant="8" id="1lk-z4-lkZ"/>
+                    <constraint firstItem="bxv-ms-Th9" firstAttribute="width" secondItem="IOR-DM-p90" secondAttribute="width" multiplier="0.25" id="8u9-aI-dpq"/>
+                    <constraint firstItem="ME2-G6-jje" firstAttribute="top" secondItem="z9Q-Xd-xIY" secondAttribute="bottom" constant="8" id="BNK-T3-Wyd"/>
+                    <constraint firstItem="bxv-ms-Th9" firstAttribute="top" secondItem="IOR-DM-p90" secondAttribute="top" constant="16" id="D8L-z2-v05"/>
+                    <constraint firstItem="dSM-fA-HqJ" firstAttribute="leading" secondItem="IOR-DM-p90" secondAttribute="leading" id="E0H-r6-gL1"/>
+                    <constraint firstItem="z9Q-Xd-xIY" firstAttribute="top" secondItem="dSM-fA-HqJ" secondAttribute="bottom" id="Jwz-hB-SzI"/>
+                    <constraint firstItem="v7d-zB-aeG" firstAttribute="leading" secondItem="ME2-G6-jje" secondAttribute="trailing" constant="4" id="La7-94-zpX"/>
+                    <constraint firstItem="Svf-19-lhg" firstAttribute="width" secondItem="bxv-ms-Th9" secondAttribute="width" multiplier="0.3" id="QIc-Pu-Ycx"/>
+                    <constraint firstItem="dSM-fA-HqJ" firstAttribute="top" secondItem="IOR-DM-p90" secondAttribute="top" constant="16" id="Tfq-x9-I4m"/>
+                    <constraint firstAttribute="trailing" secondItem="bxv-ms-Th9" secondAttribute="trailing" id="WDn-zk-Q8V"/>
+                    <constraint firstItem="bxv-ms-Th9" firstAttribute="leading" secondItem="z9Q-Xd-xIY" secondAttribute="trailing" constant="20" id="aUy-Kj-IlA"/>
+                    <constraint firstItem="Svf-19-lhg" firstAttribute="trailing" secondItem="bxv-ms-Th9" secondAttribute="trailing" constant="-8" id="fEk-nF-15v"/>
+                    <constraint firstItem="z9Q-Xd-xIY" firstAttribute="leading" secondItem="IOR-DM-p90" secondAttribute="leading" id="l2g-ci-b24"/>
+                    <constraint firstItem="ME2-G6-jje" firstAttribute="leading" secondItem="IOR-DM-p90" secondAttribute="leading" id="lBP-1n-o0K"/>
+                    <constraint firstAttribute="bottom" secondItem="bxv-ms-Th9" secondAttribute="bottom" constant="16" id="y1V-fT-NoQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="likeImageView" destination="Svf-19-lhg" id="Eoh-as-mOY"/>
+                <outlet property="ratingAndSaveLabel" destination="v7d-zB-aeG" id="QFg-xK-zKW"/>
+                <outlet property="subtitleLabel" destination="z9Q-Xd-xIY" id="gcp-cL-nbQ"/>
+                <outlet property="thumbnailImageView" destination="bxv-ms-Th9" id="N3N-hY-mOg"/>
+                <outlet property="titleLabel" destination="dSM-fA-HqJ" id="3qt-bL-xY4"/>
+                <outletCollection property="ratingImageViewList" destination="n23-Vq-7xy" collectionClass="NSMutableArray" id="NXq-pi-w1K"/>
+                <outletCollection property="ratingImageViewList" destination="Xzh-tZ-jNf" collectionClass="NSMutableArray" id="laq-f5-bQA"/>
+                <outletCollection property="ratingImageViewList" destination="2GK-HO-KtN" collectionClass="NSMutableArray" id="BTb-K2-Adn"/>
+                <outletCollection property="ratingImageViewList" destination="Wju-hb-b8L" collectionClass="NSMutableArray" id="zwU-0L-zLt"/>
+                <outletCollection property="ratingImageViewList" destination="yaT-Qz-VdM" collectionClass="NSMutableArray" id="5Op-Y7-yoC"/>
+            </connections>
+            <point key="canvasLocation" x="-86.25954198473282" y="40.140845070422536"/>
+        </tableViewCell>
+        <tapGestureRecognizer id="71v-26-vbR"/>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star.leadinghalf.filled" catalog="system" width="128" height="116"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

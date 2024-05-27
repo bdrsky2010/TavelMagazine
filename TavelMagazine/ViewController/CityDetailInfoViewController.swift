@@ -7,8 +7,10 @@
 
 import UIKit
 
-class TravelCityViewController: UIViewController {
+class CityDetailInfoViewController: UIViewController {
 
+    @IBOutlet weak var cityTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,7 +10,14 @@
 		7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */; };
 		7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */; };
 		7B6CC59B2C049DA300FBFF21 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC59A2C049DA300FBFF21 /* UIImageView+Extension.swift */; };
-		7B6CC59D2C04A3F500FBFF21 /* TravelCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC59C2C04A3F500FBFF21 /* TravelCityViewController.swift */; };
+		7B6CC59D2C04A3F500FBFF21 /* CityDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC59C2C04A3F500FBFF21 /* CityDetailInfoViewController.swift */; };
+		7B6CC5A52C04A65800FBFF21 /* CityDetailInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5A42C04A65800FBFF21 /* CityDetailInfo.storyboard */; };
+		7B6CC5A72C04A74F00FBFF21 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5A62C04A74F00FBFF21 /* MainTabBarController.swift */; };
+		7B6CC5A92C04A95B00FBFF21 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5A82C04A95B00FBFF21 /* TravelModel.swift */; };
+		7B6CC5AB2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AA2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift */; };
+		7B6CC5AD2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */; };
+		7B6CC5B02C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */; };
+		7B6CC5B12C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */; };
 		7BBED3622C035DDF0095FA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3612C035DDF0095FA9F /* AppDelegate.swift */; };
 		7BBED3642C035DDF0095FA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */; };
 		7BBED3662C035DDF0095FA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3652C035DDF0095FA9F /* ViewController.swift */; };
@@ -29,7 +36,14 @@
 		7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineViewController.swift; sourceTree = "<group>"; };
 		7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MagazineTableViewCell.xib; sourceTree = "<group>"; };
 		7B6CC59A2C049DA300FBFF21 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		7B6CC59C2C04A3F500FBFF21 /* TravelCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCityViewController.swift; sourceTree = "<group>"; };
+		7B6CC59C2C04A3F500FBFF21 /* CityDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailInfoViewController.swift; sourceTree = "<group>"; };
+		7B6CC5A42C04A65800FBFF21 /* CityDetailInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityDetailInfo.storyboard; sourceTree = "<group>"; };
+		7B6CC5A62C04A74F00FBFF21 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7B6CC5A82C04A95B00FBFF21 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		7B6CC5AA2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
+		7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
+		7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiseTableViewCell.swift; sourceTree = "<group>"; };
+		7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertiseTableViewCell.xib; sourceTree = "<group>"; };
 		7BBED35E2C035DDF0095FA9F /* TavelMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TavelMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBED3612C035DDF0095FA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +76,7 @@
 			children = (
 				7BBED3672C035DDF0095FA9F /* Main.storyboard */,
 				7BBED37C2C0370210095FA9F /* Magazine.storyboard */,
-				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
+				7B6CC5A42C04A65800FBFF21 /* CityDetailInfo.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -71,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				7BBED3772C035E320095FA9F /* MagazineInfo.swift */,
+				7B6CC5A82C04A95B00FBFF21 /* TravelModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -78,9 +93,10 @@
 		7B6CC5A12C04A52C00FBFF21 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7B6CC5A62C04A74F00FBFF21 /* MainTabBarController.swift */,
 				7BBED37E2C0370B40095FA9F /* MagazineTableViewController.swift */,
 				7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */,
-				7B6CC59C2C04A3F500FBFF21 /* TravelCityViewController.swift */,
+				7B6CC59C2C04A3F500FBFF21 /* CityDetailInfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -88,7 +104,12 @@
 		7B6CC5A22C04A53700FBFF21 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
 				7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */,
+				7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */,
+				7B6CC5AA2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift */,
+				7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */,
+				7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -116,10 +137,10 @@
 				7BBED3612C035DDF0095FA9F /* AppDelegate.swift */,
 				7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */,
 				7BBED3652C035DDF0095FA9F /* ViewController.swift */,
-				7B6CC59E2C04A4E400FBFF21 /* Storyboard */,
 				7BBED36A2C035DE00095FA9F /* Assets.xcassets */,
 				7BBED36C2C035DE00095FA9F /* LaunchScreen.storyboard */,
 				7BBED36F2C035DE00095FA9F /* Info.plist */,
+				7B6CC59E2C04A4E400FBFF21 /* Storyboard */,
 				7B6CC59F2C04A50300FBFF21 /* Model */,
 				7B6CC5A12C04A52C00FBFF21 /* ViewController */,
 				7B6CC5A22C04A53700FBFF21 /* TableViewCell */,
@@ -194,9 +215,12 @@
 			files = (
 				7BBED3762C035DFE0095FA9F /* .gitignore in Resources */,
 				7BBED37D2C0370210095FA9F /* Magazine.storyboard in Resources */,
+				7B6CC5B02C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib in Resources */,
 				7BBED36B2C035DE00095FA9F /* Assets.xcassets in Resources */,
+				7B6CC5AD2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib in Resources */,
 				7BBED36E2C035DE00095FA9F /* Base in Resources */,
 				7BBED3692C035DDF0095FA9F /* Base in Resources */,
+				7B6CC5A52C04A65800FBFF21 /* CityDetailInfo.storyboard in Resources */,
 				7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,13 +233,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */,
-				7B6CC59D2C04A3F500FBFF21 /* TravelCityViewController.swift in Sources */,
+				7B6CC5AB2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift in Sources */,
+				7B6CC59D2C04A3F500FBFF21 /* CityDetailInfoViewController.swift in Sources */,
+				7B6CC5A72C04A74F00FBFF21 /* MainTabBarController.swift in Sources */,
 				7BBED37F2C0370B40095FA9F /* MagazineTableViewController.swift in Sources */,
 				7BBED3662C035DDF0095FA9F /* ViewController.swift in Sources */,
 				7BBED3782C035E320095FA9F /* MagazineInfo.swift in Sources */,
 				7B6CC59B2C049DA300FBFF21 /* UIImageView+Extension.swift in Sources */,
+				7B6CC5B12C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift in Sources */,
 				7BBED3812C0371A10095FA9F /* MagazineTableViewCell.swift in Sources */,
 				7BBED3622C035DDF0095FA9F /* AppDelegate.swift in Sources */,
+				7B6CC5A92C04A95B00FBFF21 /* TravelModel.swift in Sources */,
 				7BBED3642C035DDF0095FA9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
