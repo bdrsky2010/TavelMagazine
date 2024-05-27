@@ -114,6 +114,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		7B6CC5B22C04CF5E00FBFF21 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B6CC59A2C049DA300FBFF21 /* UIImageView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7BBED3552C035DDF0095FA9F = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +152,7 @@
 				7B6CC59F2C04A50300FBFF21 /* Model */,
 				7B6CC5A12C04A52C00FBFF21 /* ViewController */,
 				7B6CC5A22C04A53700FBFF21 /* TableViewCell */,
-				7B6CC59A2C049DA300FBFF21 /* UIImageView+Extension.swift */,
+				7B6CC5B22C04CF5E00FBFF21 /* Extension */,
 			);
 			path = TavelMagazine;
 			sourceTree = "<group>";
