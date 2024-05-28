@@ -19,6 +19,7 @@ class CityDetailInfoViewController: UIViewController,
         super.viewDidLoad()
 
         navigationItem.title = "도시 상세 정보"
+        
         cityTableView.separatorStyle = .none
         
         cityTableView.delegate = self
@@ -46,7 +47,9 @@ class CityDetailInfoViewController: UIViewController,
         var identifier: String
         
         if cityInfo.ad {
+            
             identifier = AdvertiseTableViewCell.reuseIdentifier
+            
             let cell = cityTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! AdvertiseTableViewCell
             
             cell.changeDescriptionLabel(cell.adDescriptionLabel, text: cityInfo.title)
@@ -55,6 +58,7 @@ class CityDetailInfoViewController: UIViewController,
         }
         
         identifier = CityDetailInfoTableViewCell.reuseIdentifier
+        
         let cell = cityTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CityDetailInfoTableViewCell
         
         cell.configureCellContent(cityInfo)
@@ -74,9 +78,10 @@ class CityDetailInfoViewController: UIViewController,
         
         let index = imageView.tag
         
+        guard let cell = cityTableView.cellForRow(at: IndexPath(row: index, section: 0)) as? CityDetailInfoTableViewCell else { return }
+        
         cityInfoList[index].like?.toggle()
         
-        guard let cell = cityTableView.cellForRow(at: IndexPath(row: index, section: 0)) as? CityDetailInfoTableViewCell else { return }
         cell.changeLikeImage(imageView, isLike: cityInfoList[index].like ?? false)
     }
 }
