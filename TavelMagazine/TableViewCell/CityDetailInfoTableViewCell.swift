@@ -20,6 +20,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
     
     @IBOutlet var ratingImageViewList: [UIImageView]!
     
+    // 인스턴스를 생성할 때 호출
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
@@ -27,11 +28,17 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         print(#function)
     }
     
+    // root view의 sub view를 그릴 때 호출
+    // 동적으로 sub view의 UI를 변경해줘야 할 때
+    // 여기서 작성
     override func layoutSubviews() {
         super.layoutSubviews()
         print(#function)
     }
     
+    // cell이 재사용되기 전에 호출
+    // 재사용되기 전에 UI 수정할 일 있으면
+    // 여기에 작성
     override func prepareForReuse() {
         super.prepareForReuse()
         print(#function)
