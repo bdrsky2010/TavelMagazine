@@ -15,6 +15,11 @@ struct Travel {
     var like: Bool?
     let ad: Bool
     
+    var roundGradeToInt: Int {
+        guard let grade else { return 0 }
+        return Int(round(grade))
+    }
+    
     var gradeAndSave: String? {
         guard let grade, let save else { return nil }
         

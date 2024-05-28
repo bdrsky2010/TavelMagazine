@@ -22,23 +22,25 @@ class MagazineTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         selectionStyle = .none
-        configUI()
+        configureUI()
     }
     
-    private func configUI() {
+    private func configureUI() {
         infoImageView.layer.cornerRadius = 10
         infoImageView.contentMode = .scaleAspectFill
         
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        titleLabel.numberOfLines = 0
         
         subtitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
         subtitleLabel.textColor = .systemGray
+        subtitleLabel.numberOfLines = 0
         
         dateLabel.font = .systemFont(ofSize: 14, weight: .bold)
         dateLabel.textColor = .systemGray
     }
     
-    public func configCellContent(_ magazine: Magazine) {
+    public func configureCellContent(_ magazine: Magazine) {
         if let url = magazine.imageURL {
             infoImageView.configureImageWithKF(url: url)
         }
@@ -47,11 +49,4 @@ class MagazineTableViewCell: UITableViewCell {
         subtitleLabel.text = magazine.subtitle
         dateLabel.text = magazine.date.convertStrDate
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

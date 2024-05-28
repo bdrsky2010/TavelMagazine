@@ -24,6 +24,17 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         configureUI()
+        print(#function)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        print(#function)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        print(#function)
     }
     
     private func configureUI() {
@@ -59,7 +70,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
             let imageView = $0.element
             
             imageView.image = UIImage(systemName: "star.fill")
-            imageView.tintColor = index < Int(round(travel.grade ?? 0.0)) ? .systemYellow : .systemGray3
+            imageView.tintColor = index < travel.roundGradeToInt ? .systemYellow : .systemGray3
         }
         
         if let url = travel.imageURL {
@@ -76,11 +87,4 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         imageView.image = UIImage(systemName: likeImageName)
         imageView.tintColor = imageTintColor
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

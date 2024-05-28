@@ -28,7 +28,7 @@ class MagazineTableViewController: UITableViewController {
         let index = indexPath.row
         let magazine = Magazine.magazineList[index]
         
-        cell.configCellContent(magazine)
+        cell.configureCellContent(magazine)
         
         return cell
     }
