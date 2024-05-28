@@ -18,15 +18,18 @@ class MagazineViewController: UIViewController,
 
         navigationItem.title = "떠나보자 TRAVEL"
         
+        configureTableView()
+    }
+    
+    private func configureTableView() {
         magazineTableView.delegate = self
         magazineTableView.dataSource = self
-        magazineTableView.rowHeight = 450
+        magazineTableView.rowHeight = UITableView.automaticDimension
+//        magazineTableView.rowHeight = 450
         magazineTableView.separatorStyle = .none
         
-        let nib = UINib(nibName: MagazineTableViewCell.reuseIdentifier,
-                        bundle: nil)
-        magazineTableView.register(nib,
-                                   forCellReuseIdentifier: MagazineTableViewCell.reuseIdentifier)
+        let nib = UINib(nibName: MagazineTableViewCell.reuseIdentifier, bundle: nil)
+        magazineTableView.register(nib, forCellReuseIdentifier: MagazineTableViewCell.reuseIdentifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

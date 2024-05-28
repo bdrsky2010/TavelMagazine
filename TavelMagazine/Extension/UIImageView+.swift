@@ -1,5 +1,5 @@
 //
-//  UIImageView+Extension.swift
+//  UIImageView+.swift
 //  TavelMagazine
 //
 //  Created by Minjae Kim on 5/27/24.
@@ -8,9 +8,7 @@
 import UIKit
 
 extension UIImageView {
-    public func configureImageWithKF(urlString: String) {
-        let url = URL(string: urlString)
-        
+    public func configureImageWithKF(url: URL) {
         self.kf.indicatorType = .activity
         self.kf.setImage(
             with: url,

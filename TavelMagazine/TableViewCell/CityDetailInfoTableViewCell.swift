@@ -52,20 +52,19 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         titleLabel.text = travel.title
         subtitleLabel.text = travel.description
         
-        let grade = travel.grade ?? 0.0
-        let save = travel.save ?? 0
-        ratingAndSaveLabel.text = "(\(grade.formatted())) ∙ 저장 \(save.formatted())"
+        ratingAndSaveLabel.text = travel.gradeAndSave ?? ""
         
         ratingImageViewList.enumerated().forEach {
             let index = $0.offset
             let imageView = $0.element
             
             imageView.image = UIImage(systemName: "star.fill")
-            imageView.tintColor = index < Int(round(grade)) ? .systemYellow : .systemGray3
+            imageView.tintColor = index < Int(round(travel.grade ?? 0.0)) ? .systemYellow : .systemGray3
         }
         
-        let urlString = travel.travel_image ?? ""
-        thumbnailImageView.configureImageWithKF(urlString: urlString)
+        if let url = travel.imageURL {
+            thumbnailImageView.configureImageWithKF(url: url)
+        }
         
         changeLikeImage(likeImageView, isLike: travel.like ?? false)
     }

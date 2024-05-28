@@ -13,13 +13,17 @@ class CityDetailInfoViewController: UIViewController,
     
     @IBOutlet weak var cityTableView: UITableView!
     
-    private var cityInfoList = TravelInfo().travel
+    private var cityInfoList = TravelInfo.travel
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "도시 상세 정보"
         
+        configureTableView()
+    }
+    
+    private func configureTableView() {
         cityTableView.separatorStyle = .none
         
         cityTableView.delegate = self
@@ -30,6 +34,8 @@ class CityDetailInfoViewController: UIViewController,
         
         cityTableView.register(cityNib, forCellReuseIdentifier: CityDetailInfoTableViewCell.reuseIdentifier)
         cityTableView.register(adNib, forCellReuseIdentifier: AdvertiseTableViewCell.reuseIdentifier)
+        
+//        cityTableView.rowHeight = UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +52,7 @@ class CityDetailInfoViewController: UIViewController,
         
         var identifier: String
         
-        if cityInfo.ad {
+        if cityInfo.ad { // 광고 속성이 True인 경우
             
             identifier = AdvertiseTableViewCell.reuseIdentifier
             
@@ -57,6 +63,7 @@ class CityDetailInfoViewController: UIViewController,
             return cell
         }
         
+        // 광고 속성이 False인 경우
         identifier = CityDetailInfoTableViewCell.reuseIdentifier
         
         let cell = cityTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CityDetailInfoTableViewCell
