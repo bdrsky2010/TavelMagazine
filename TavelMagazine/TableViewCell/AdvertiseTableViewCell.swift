@@ -39,7 +39,7 @@ class AdvertiseTableViewCell: UITableViewCell {
         adDescriptionLabel.font = .systemFont(ofSize: 15, weight: .heavy)
         adDescriptionLabel.textColor = .black
         adDescriptionLabel.textAlignment = .center
-        adDescriptionLabel.numberOfLines = 3
+        adDescriptionLabel.numberOfLines = 0
     }
     
     private func configureCellContent() {
@@ -49,11 +49,4 @@ class AdvertiseTableViewCell: UITableViewCell {
     public func changeDescriptionLabel(_ label: UILabel, text: String) {
         label.text = text
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
