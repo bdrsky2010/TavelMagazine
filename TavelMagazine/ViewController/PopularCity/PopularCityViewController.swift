@@ -35,22 +35,6 @@ extension PopularCityViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
-//        defer {
-//            popularCityTableView.reloadData()
-//            view.endEditing(true)
-//        }
-//        
-//        guard let text = searchBar.text, !text.isEmpty else {
-//            filteredList = popularCityList
-//            return
-//        }
-//        
-//        filterCityList()
-//        
-//        filteredList = filteredList.filter { containsClosure($0.cityName.lowercased(),
-//                                                             $0.city_english_name.lowercased(),
-//                                                             $0.city_explain.lowercased(),
-//                                                             text.lowercased()) }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
