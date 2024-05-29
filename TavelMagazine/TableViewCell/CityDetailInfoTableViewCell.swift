@@ -93,5 +93,6 @@ class CityDetailInfoTableViewCell: UITableViewCell {
         
         imageView.image = UIImage(systemName: likeImageName)
         imageView.tintColor = imageTintColor
+        
     }
 }

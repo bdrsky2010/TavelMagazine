@@ -7,9 +7,7 @@
 
 import UIKit
 
-class MagazineViewController: UIViewController,
-                              UITableViewDelegate,
-                              UITableViewDataSource {
+class MagazineViewController: UIViewController {
 
     @IBOutlet weak var magazineTableView: UITableView!
     
@@ -20,6 +18,10 @@ class MagazineViewController: UIViewController,
         
         configureTableView()
     }
+}
+
+// MARK: Configure TableView
+extension MagazineViewController {
     
     private func configureTableView() {
         magazineTableView.delegate = self
@@ -31,6 +33,15 @@ class MagazineViewController: UIViewController,
         let nib = UINib(nibName: MagazineTableViewCell.reuseIdentifier, bundle: nil)
         magazineTableView.register(nib, forCellReuseIdentifier: MagazineTableViewCell.reuseIdentifier)
     }
+}
+
+// MARK: Configure UITableViewDelegate
+extension MagazineViewController: UITableViewDelegate {
+    
+}
+
+// MARK: Configure UITableViewDataSource
+extension MagazineViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Magazine.magazineList.count

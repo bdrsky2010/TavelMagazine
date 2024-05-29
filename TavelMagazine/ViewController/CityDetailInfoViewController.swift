@@ -7,9 +7,7 @@
 
 import UIKit
 
-class CityDetailInfoViewController: UIViewController,
-                                    UITableViewDelegate,
-                                    UITableViewDataSource {
+class CityDetailInfoViewController: UIViewController {
     
     @IBOutlet weak var cityTableView: UITableView!
     
@@ -17,11 +15,15 @@ class CityDetailInfoViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = "도시 상세 정보"
         
         configureTableView()
     }
+}
+
+// MARK: Configure TableView
+extension CityDetailInfoViewController {
     
     private func configureTableView() {
         cityTableView.separatorStyle = .none
@@ -41,10 +43,19 @@ class CityDetailInfoViewController: UIViewController,
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cityInfoList.count
     }
+}
+
+// MARK: Configure UITableViewDelegate
+extension CityDetailInfoViewController: UITableViewDelegate {
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return cityInfoList[indexPath.row].ad ? 70 : 160
-//    }
+}
+
+// MARK: Configure UITableViewDataSource
+extension CityDetailInfoViewController: UITableViewDataSource {
+    
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return cityInfoList[indexPath.row].ad ? 70 : 160
+    //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
