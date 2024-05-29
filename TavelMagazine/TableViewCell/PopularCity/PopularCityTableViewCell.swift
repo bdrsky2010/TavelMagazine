@@ -42,13 +42,14 @@ extension PopularCityTableViewCell {
     
     
     private func configureCellView() {
+//        cellView.clipsToBounds = true
         cellView.layer.cornerRadius = 20
         cellView.layer.maskedCorners = .ArrayLiteralElement(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMaxYCorner)
         
         cellView.layer.shadowColor = UIColor.systemGray.cgColor
-        cellView.layer.shadowOpacity = 0.2
+        cellView.layer.shadowOpacity = 0.4
         cellView.layer.shadowRadius = 4
-        cellView.layer.shadowOffset = .init(width: 1, height: 1)
+        cellView.layer.shadowOffset = .init(width: 5, height: 5)
     }
     
     private func configureCityImageView() {
