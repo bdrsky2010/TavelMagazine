@@ -48,6 +48,37 @@ extension CityDetailInfoViewController {
 // MARK: Configure UITableViewDelegate
 extension CityDetailInfoViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var identifier: String
+        
+        let index = indexPath.row
+        let cityInfo = cityInfoList[index]
+        
+        defer {
+            cityTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+        if cityInfo.ad {
+            
+            identifier = AdvertiseViewController.identifier
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: identifier) as! AdvertiseViewController
+            
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            
+            present(nav, animated: true)
+            
+            return
+        }
+        
+        identifier = TouristSpotViewController.identifier
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: identifier) as! TouristSpotViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: Configure UITableViewDataSource

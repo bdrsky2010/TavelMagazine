@@ -19,7 +19,6 @@ class AdvertiseTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        selectionStyle = .none
         configureUI()
         configureCellContent()
     }

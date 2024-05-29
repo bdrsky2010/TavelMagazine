@@ -23,7 +23,6 @@ class CityDetailInfoTableViewCell: UITableViewCell {
     // 인스턴스를 생성할 때 호출
     override func awakeFromNib() {
         super.awakeFromNib()
-        selectionStyle = .none
         configureUI()
         print(#function)
     }

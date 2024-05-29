@@ -37,6 +37,68 @@
             </objects>
             <point key="canvasLocation" x="138" y="5"/>
         </scene>
+        <!--Tourist Spot View Controller-->
+        <scene sceneID="UND-We-WiF">
+            <objects>
+                <viewController storyboardIdentifier="TouristSpotViewController" id="HBZ-lI-jsL" customClass="TouristSpotViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y94-xg-RK1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ut-la-jsm">
+                                <rect key="frame" x="16" y="399" width="361" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uoA-uK-RdV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ut-la-jsm" firstAttribute="centerY" secondItem="Y94-xg-RK1" secondAttribute="centerY" id="GzR-WM-hoW"/>
+                            <constraint firstItem="7Ut-la-jsm" firstAttribute="leading" secondItem="uoA-uK-RdV" secondAttribute="leading" constant="16" id="dfb-WP-E7P"/>
+                            <constraint firstItem="uoA-uK-RdV" firstAttribute="trailing" secondItem="7Ut-la-jsm" secondAttribute="trailing" constant="16" id="iQA-od-1FL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="7Ut-la-jsm" id="K63-hD-4sg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQp-gS-Ncd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.5038167938931" y="4.9295774647887329"/>
+        </scene>
+        <!--Advertise View Controller-->
+        <scene sceneID="KmH-8j-0vU">
+            <objects>
+                <viewController storyboardIdentifier="AdvertiseViewController" id="pIp-B6-6Bb" customClass="AdvertiseViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nfM-cJ-HY1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAT-4P-Nnc">
+                                <rect key="frame" x="16" y="415.66666666666669" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LCm-SK-ZbU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UAT-4P-Nnc" firstAttribute="centerY" secondItem="nfM-cJ-HY1" secondAttribute="centerY" id="4Nb-B8-lr5"/>
+                            <constraint firstItem="LCm-SK-ZbU" firstAttribute="trailing" secondItem="UAT-4P-Nnc" secondAttribute="trailing" constant="16" id="G3D-Yx-DcE"/>
+                            <constraint firstItem="UAT-4P-Nnc" firstAttribute="leading" secondItem="LCm-SK-ZbU" secondAttribute="leading" constant="16" id="mf0-Vd-ING"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="UAT-4P-Nnc" id="3Cj-cj-a4k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6H-Pf-Z8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="5"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
