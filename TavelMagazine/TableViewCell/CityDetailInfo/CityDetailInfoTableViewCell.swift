@@ -79,7 +79,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
             imageView.tintColor = index < travel.roundGradeToInt ? .systemYellow : .systemGray3
         }
         
-        if let url = travel.imageURL {
+        if let url = travel.travel_image?.stringToURL {
             thumbnailImageView.configureImageWithKF(url: url)
         }
         

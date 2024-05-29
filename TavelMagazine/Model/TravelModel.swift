@@ -26,11 +26,6 @@ struct Travel {
         let result = "(\(grade.formatted())) ∙ 저장 \(save.formatted())"
         return result
     }
-    
-    var imageURL: URL? {
-        guard let travel_image else { return nil }
-        return URL(string: travel_image)
-    }
 }
 
 struct TravelInfo {

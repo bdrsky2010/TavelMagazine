@@ -41,7 +41,7 @@ class MagazineTableViewCell: UITableViewCell {
     }
     
     public func configureCellContent(_ magazine: Magazine) {
-        if let url = magazine.imageURL {
+        if let url = magazine.photo_image.stringToURL {
             infoImageView.configureImageWithKF(url: url)
         }
         
