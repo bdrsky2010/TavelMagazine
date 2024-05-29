@@ -17,13 +17,30 @@ class PopularCityViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "인기 도시 "
+        configureTableView()
     }
 }
 
+// MARK: Configure TableView
+extension PopularCityViewController {
+    private func configureTableView() {
+        let nib = UINib(nibName: PopularCityTableViewCell.reuseIdentifier, bundle: nil)
+        
+        popularCityTableView.register(nib, forCellReuseIdentifier: PopularCityTableViewCell.reuseIdentifier)
+        
+        popularCityTableView.delegate = self
+        popularCityTableView.dataSource = self
+        
+        popularCityTableView.rowHeight = UITableView.automaticDimension
+    }
+}
+
+// MARK: Configure UITableViewDelegate
 extension PopularCityViewController: UITableViewDelegate {
     
 }
 
+// MARK: Configure UITableViewDataSource
 extension PopularCityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return popularCityList.count

@@ -11,15 +11,19 @@ class PopularCityTableViewCell: UITableViewCell {
 
     static let reuseIdentifier = "PopularCityTableViewCell"
     
+    @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var cityImageView: UIImageView!
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var cityExplainBackgroundView: UIView!
+    @IBOutlet weak var cityExplainLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
 }
