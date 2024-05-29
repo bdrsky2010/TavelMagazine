@@ -97,7 +97,7 @@
         <scene sceneID="mB7-tJ-kfo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UrD-9S-5ZW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="City" id="1Pc-ip-lxQ"/>
+                    <tabBarItem key="tabBarItem" title="City" image="figure.core.training" catalog="system" id="1Pc-ip-lxQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yUZ-qa-sTz">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -115,6 +115,7 @@
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
+        <image name="figure.core.training" catalog="system" width="128" height="48"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
     </resources>
 </document>

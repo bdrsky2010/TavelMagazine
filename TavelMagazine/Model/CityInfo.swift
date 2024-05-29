@@ -12,6 +12,10 @@ struct City {
     let city_explain: String
     let city_image: String
     let domestic_travel: Bool // 국내 여행지인지 아닌지
+    
+    var cityName: String {
+        return "\(city_name) | \(city_english_name)"
+    }
 }
 
 struct CityInfo {

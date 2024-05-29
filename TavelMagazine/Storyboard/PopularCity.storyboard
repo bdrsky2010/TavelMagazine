@@ -17,26 +17,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IVK-cy-Vgt">
-                                <rect key="frame" x="0.0" y="79" width="393" height="739"/>
+                                <rect key="frame" x="0.0" y="178" width="393" height="640"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-1j-uzT">
+                                <rect key="frame" x="20" y="131" width="353" height="32"/>
+                                <segments>
+                                    <segment title="모두"/>
+                                    <segment title="국내"/>
+                                    <segment title="해외"/>
+                                </segments>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q1Q-9W-PPE">
+                                <rect key="frame" x="13" y="59" width="367" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="C1o-Xq-bkT"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IVK-cy-Vgt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="3mc-ho-Y5E"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VIh-1j-uzT" secondAttribute="trailing" constant="20" id="2NA-mm-tG6"/>
+                            <constraint firstItem="VIh-1j-uzT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GwP-by-lVE"/>
+                            <constraint firstItem="q1Q-9W-PPE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="H6J-BO-iL3"/>
+                            <constraint firstItem="IVK-cy-Vgt" firstAttribute="top" secondItem="VIh-1j-uzT" secondAttribute="bottom" constant="16" id="O5y-Na-0QR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q1Q-9W-PPE" secondAttribute="trailing" constant="13" id="ZJp-dL-vHY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IVK-cy-Vgt" secondAttribute="bottom" id="bTj-L6-al3"/>
+                            <constraint firstItem="VIh-1j-uzT" firstAttribute="top" secondItem="q1Q-9W-PPE" secondAttribute="bottom" constant="16" id="l97-ri-rA1"/>
+                            <constraint firstItem="q1Q-9W-PPE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="13" id="pOY-fK-q2r"/>
                             <constraint firstItem="IVK-cy-Vgt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sqn-am-nBZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IVK-cy-Vgt" secondAttribute="trailing" id="t1D-ze-vvu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="domesticSegmentedControl" destination="VIh-1j-uzT" id="f5m-2G-uGd"/>
                         <outlet property="popularCityTableView" destination="IVK-cy-Vgt" id="njN-ZF-daC"/>
+                        <outlet property="searchBar" destination="q1Q-9W-PPE" id="VnW-aT-y29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-2"/>
+            <point key="canvasLocation" x="54.198473282442748" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
