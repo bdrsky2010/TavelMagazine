@@ -9,6 +9,8 @@ import UIKit
 
 class PopularCityTableViewCell: UITableViewCell {
 
+    static let reuseIdentifier = "PopularCityTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
