@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurant View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantViewController" id="Y6W-OH-hqX" customClass="RestaurantViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXw-tQ-r7K">
+                                <rect key="frame" x="20" y="59" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2gg-tD-8hA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-BU-mhm">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RXJ-nE-nz9">
+                                <rect key="frame" x="60" y="129" width="273" height="32"/>
+                                <segments>
+                                    <segment title="전체"/>
+                                    <segment title="한식"/>
+                                    <segment title="중식"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jv7-BU-mhm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="045-e7-Q88"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RXJ-nE-nz9" secondAttribute="trailing" constant="60" id="2RG-vp-S5t"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jv7-BU-mhm" secondAttribute="bottom" id="7jD-N8-N9v"/>
+                            <constraint firstItem="Jv7-BU-mhm" firstAttribute="top" secondItem="PXw-tQ-r7K" secondAttribute="bottom" id="ELk-0z-o1v"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jv7-BU-mhm" secondAttribute="trailing" id="Na9-kA-iNf"/>
+                            <constraint firstItem="PXw-tQ-r7K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="RZx-xO-mDQ"/>
+                            <constraint firstItem="RXJ-nE-nz9" firstAttribute="top" secondItem="PXw-tQ-r7K" secondAttribute="bottom" constant="20" id="S2m-57-7Tm"/>
+                            <constraint firstItem="RXJ-nE-nz9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="dbe-Sz-Dln"/>
+                            <constraint firstItem="PXw-tQ-r7K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fCe-s3-124"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PXw-tQ-r7K" secondAttribute="trailing" constant="20" id="mRg-hY-Xy6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterTextField" destination="PXw-tQ-r7K" id="U8C-Dp-tqI"/>
+                        <outlet property="foodSegmentedControl" destination="RXJ-nE-nz9" id="QO8-jU-373"/>
+                        <outlet property="mapView" destination="Jv7-BU-mhm" id="d9w-Qf-Z6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23.664122137404579" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

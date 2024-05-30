@@ -19,6 +19,7 @@
                         <segue destination="LjC-z7-0xe" kind="relationship" relationship="viewControllers" id="XhP-6M-BXK"/>
                         <segue destination="Qmn-S3-n22" kind="relationship" relationship="viewControllers" id="7VC-cp-Wph"/>
                         <segue destination="UrD-9S-5ZW" kind="relationship" relationship="viewControllers" id="HMl-6R-Qxd"/>
+                        <segue destination="Q6S-6J-ND4" kind="relationship" relationship="viewControllers" id="pah-aR-Hdx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Inp-sx-pAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,6 +94,16 @@
             </objects>
             <point key="canvasLocation" x="471" y="627"/>
         </scene>
+        <!--Restaurant-->
+        <scene sceneID="WYP-eC-JtG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Restaurant" id="kV3-ec-aF6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BZY-Z2-Q8M"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lne-5d-v5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="1285"/>
+        </scene>
         <!--City-->
         <scene sceneID="mB7-tJ-kfo">
             <objects>
@@ -112,10 +123,30 @@
             </objects>
             <point key="canvasLocation" x="-277" y="627"/>
         </scene>
+        <!--맛집-->
+        <scene sceneID="NIb-aM-ayl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q6S-6J-ND4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="맛집" image="fork.knife" catalog="system" id="jdS-NM-YMt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fHZ-ej-v1k">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kV3-ec-aF6" kind="relationship" relationship="rootViewController" id="3W3-LR-mE9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McS-eP-PUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="1285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
         <image name="figure.core.training" catalog="system" width="128" height="48"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
     </resources>
 </document>
