@@ -17,6 +17,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-86-QxT">
+                        <rect key="frame" x="16" y="8" width="288" height="124"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-I8-EVr">
                         <rect key="frame" x="16" y="8" width="288" height="124"/>
                         <subviews>
@@ -42,7 +46,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaW-KG-3AX">
-                                <rect key="frame" x="234" y="11.999999999999998" width="42" height="20.333333333333329"/>
+                                <rect key="frame" x="234" y="7.9999999999999982" width="42" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,16 +63,20 @@
                             <constraint firstItem="vIM-Od-JQ6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KaW-KG-3AX" secondAttribute="bottom" constant="60" id="fSK-Xk-ubZ"/>
                             <constraint firstItem="6f6-tO-PdB" firstAttribute="top" secondItem="nyE-I8-EVr" secondAttribute="top" id="kpm-2v-jpu"/>
                             <constraint firstAttribute="trailing" secondItem="vIM-Od-JQ6" secondAttribute="trailing" id="sxG-sm-gBD"/>
-                            <constraint firstItem="KaW-KG-3AX" firstAttribute="top" secondItem="nyE-I8-EVr" secondAttribute="top" constant="12" id="vFp-ny-Ii0"/>
+                            <constraint firstItem="KaW-KG-3AX" firstAttribute="top" secondItem="nyE-I8-EVr" secondAttribute="top" constant="8" id="vFp-ny-Ii0"/>
                             <constraint firstAttribute="bottom" secondItem="vIM-Od-JQ6" secondAttribute="bottom" id="x2K-Xj-knB"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="nyE-I8-EVr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ZiF-Gm-e8D"/>
-                    <constraint firstItem="nyE-I8-EVr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jQz-PV-VTk"/>
-                    <constraint firstAttribute="trailing" secondItem="nyE-I8-EVr" secondAttribute="trailing" constant="16" id="y7E-0I-ab9"/>
-                    <constraint firstAttribute="bottom" secondItem="nyE-I8-EVr" secondAttribute="bottom" constant="8" id="zk8-v9-d4s"/>
+                    <constraint firstItem="nyE-I8-EVr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4hf-sh-mYn"/>
+                    <constraint firstAttribute="trailing" secondItem="DkG-86-QxT" secondAttribute="trailing" constant="16" id="4mt-Zh-xnM"/>
+                    <constraint firstItem="DkG-86-QxT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="DSN-TG-vE5"/>
+                    <constraint firstItem="nyE-I8-EVr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="UaB-w3-Kgm"/>
+                    <constraint firstItem="DkG-86-QxT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="c3G-tD-KS7"/>
+                    <constraint firstAttribute="bottom" secondItem="nyE-I8-EVr" secondAttribute="bottom" constant="8" id="glW-hr-B6J"/>
+                    <constraint firstAttribute="bottom" secondItem="DkG-86-QxT" secondAttribute="bottom" constant="8" id="qXh-Dc-AZM"/>
+                    <constraint firstAttribute="trailing" secondItem="nyE-I8-EVr" secondAttribute="trailing" constant="16" id="vgV-PR-oSo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -78,6 +86,7 @@
                 <outlet property="cityExplainLabel" destination="GMI-7E-st8" id="uwk-ZC-o0J"/>
                 <outlet property="cityImageView" destination="6f6-tO-PdB" id="jJF-C8-ZBs"/>
                 <outlet property="cityNameLabel" destination="KaW-KG-3AX" id="Jgt-dt-nGL"/>
+                <outlet property="rootView" destination="DkG-86-QxT" id="Gir-fD-jcL"/>
             </connections>
             <point key="canvasLocation" x="80.916030534351137" y="53.521126760563384"/>
         </tableViewCell>

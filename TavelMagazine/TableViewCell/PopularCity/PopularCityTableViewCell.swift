@@ -12,6 +12,7 @@ class PopularCityTableViewCell: UITableViewCell {
 
     static let reuseIdentifier = "PopularCityTableViewCell"
     
+    @IBOutlet weak var rootView: UIView!
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -26,7 +27,7 @@ class PopularCityTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        configureCellView()
+        
     }
 }
 
@@ -34,36 +35,36 @@ class PopularCityTableViewCell: UITableViewCell {
 extension PopularCityTableViewCell {
     
     private func configureUI() {
+        configureRootView()
+        configureCellView()
         configureCityImageView()
         configurecityExplainBackgroundView()
         configureCityLabel()
     }
     
-    
+    private func configureRootView() {
+        rootView.layer.cornerRadius = 20
+        rootView.layer.maskedCorners = .ArrayLiteralElement(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMaxYCorner)
+        
+        rootView.layer.shadowColor = UIColor.systemGray.cgColor
+        rootView.layer.shadowOpacity = 1
+        rootView.layer.shadowRadius = 4
+        rootView.layer.shadowOffset = .init(width: 3, height: 3)
+    }
     
     private func configureCellView() {
-//        cellView.clipsToBounds = true
+        cellView.clipsToBounds = true
         cellView.layer.cornerRadius = 20
         cellView.layer.maskedCorners = .ArrayLiteralElement(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMaxYCorner)
-        
-        cellView.layer.shadowColor = UIColor.systemGray.cgColor
-        cellView.layer.shadowOpacity = 0.4
-        cellView.layer.shadowRadius = 4
-        cellView.layer.shadowOffset = .init(width: 5, height: 5)
     }
     
     private func configureCityImageView() {
         cityImageView.contentMode = .scaleAspectFill
-        cityImageView.layer.cornerRadius = 20
-        cityImageView.layer.maskedCorners = .ArrayLiteralElement(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMaxYCorner)
     }
     
     private func configurecityExplainBackgroundView() {
         cityExplainBackgroundView.layer.backgroundColor = UIColor.label.cgColor
         cityExplainBackgroundView.layer.opacity = 0.7
-        
-        cityExplainBackgroundView.layer.cornerRadius = 20
-        cityExplainBackgroundView.layer.maskedCorners = .layerMaxXMaxYCorner
     }
     
     private func configureCityLabel() {
