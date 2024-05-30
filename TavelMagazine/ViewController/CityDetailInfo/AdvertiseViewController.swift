@@ -13,6 +13,9 @@ class AdvertiseViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    public var backgroundColor: UIColor?
+    public var adContents: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +28,14 @@ class AdvertiseViewController: UIViewController {
 // Configure UI
 extension AdvertiseViewController: CellToMoveViewControllerProtocol {
     private func configureUI() {
-        configureTitleLabelFontBlack45(titleLabel)
-        configureTitleLabelText(titleLabel, text: "광고 화면")
+        guard let backgroundColor, let adContents else { return }
+        
+        view.backgroundColor = backgroundColor
+        
+        titleLabel.font = .systemFont(ofSize: 17, weight: .black)
+        titleLabel.text = adContents
+        titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 0
     }
     
     func configureNavigation() {

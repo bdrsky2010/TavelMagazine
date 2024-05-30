@@ -65,6 +65,11 @@ extension CityDetailInfoViewController: UITableViewDelegate {
             
             let vc = storyboard?.instantiateViewController(withIdentifier: identifier) as! AdvertiseViewController
             
+            let cell = tableView.cellForRow(at: indexPath) as! AdvertiseTableViewCell
+            
+            vc.backgroundColor = cell.adCellView.backgroundColor
+            vc.adContents = cityInfo.title
+            
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
             
@@ -76,6 +81,10 @@ extension CityDetailInfoViewController: UITableViewDelegate {
         identifier = TouristSpotViewController.identifier
         
         let vc = storyboard?.instantiateViewController(withIdentifier: identifier) as! TouristSpotViewController
+        
+        vc.travel = cityInfo
+        vc.profileImageURL = "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F543cf73d-3746-44e3-b9b5-ff66847a8600%2F5876bf0b-6f27-42e5-bfe5-65cf8848c547%2F(%25EC%25B6%2595%25EC%2595%25BD)%25EC%2583%2588%25EC%258B%25B9SeSAC_CI.png&blockId=ad17acdf-4df8-4e4a-85d2-a99b0643cdf4&width=256".stringToURL
+        vc.profileName = "SeSAC"
         
         navigationController?.pushViewController(vc, animated: true)
     }
