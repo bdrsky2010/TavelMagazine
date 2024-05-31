@@ -13,7 +13,7 @@ class RestaurantViewController: UIViewController {
     static let identifier = "RestaurantViewController"
     
     @IBOutlet weak var filterTextField: UITextField!
-    
+    @IBOutlet weak var textFieldCoverView: UIView!
     @IBOutlet weak var foodSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -54,6 +54,8 @@ class RestaurantViewController: UIViewController {
         
         navigationItem.title = "문래동 맛집 탐방"
         
+        configureTextFieldCoverView()
+        
         configureSegmentedControl()
         
         filterTextField.tintColor = .clear
@@ -64,6 +66,24 @@ class RestaurantViewController: UIViewController {
         configurePickerView()
         
         configureMapView()
+    }
+}
+
+// MARK: Configure textFieldCoverView
+extension RestaurantViewController {
+    private func configureTextFieldCoverView() {
+        
+        textFieldCoverView.backgroundColor = .clear
+        textFieldCoverView.isUserInteractionEnabled = true
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(textFieldCoverTapAction))
+        
+        textFieldCoverView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc
+    private func textFieldCoverTapAction() {
+        filterTextField.becomeFirstResponder()
     }
 }
 
@@ -159,7 +179,7 @@ extension RestaurantViewController: MKMapViewDelegate {
     
     @objc
     private func mapViewTapped() {
-        view.endEditing(true)
+        filterTextField.resignFirstResponder()
     }
     
     private func configureAnnotations(closure: () -> Void) -> [MKPointAnnotation] {
@@ -168,7 +188,7 @@ extension RestaurantViewController: MKMapViewDelegate {
             
             let restaurant = restaurantDictionary[$0]
             
-            let title = restaurant?.name
+            let title = restaurant?.name ?? "새싹 영등포캠퍼스"
             let coordinate = CLLocationCoordinate2D(latitude: restaurant?.latitude ?? 37.517742,
                                                     longitude: restaurant?.longitude ?? 126.886463)
             

@@ -37,6 +37,13 @@
                                     <segment title="중식"/>
                                 </segments>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-bq-mVq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NLC-YY-6Iq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,10 +53,13 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jv7-BU-mhm" secondAttribute="bottom" id="7jD-N8-N9v"/>
                             <constraint firstItem="Jv7-BU-mhm" firstAttribute="top" secondItem="PXw-tQ-r7K" secondAttribute="bottom" id="ELk-0z-o1v"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jv7-BU-mhm" secondAttribute="trailing" id="Na9-kA-iNf"/>
+                            <constraint firstItem="M1u-bq-mVq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OwF-Z9-yW2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M1u-bq-mVq" secondAttribute="trailing" id="PG1-XX-nlp"/>
                             <constraint firstItem="PXw-tQ-r7K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="RZx-xO-mDQ"/>
                             <constraint firstItem="RXJ-nE-nz9" firstAttribute="top" secondItem="PXw-tQ-r7K" secondAttribute="bottom" constant="20" id="S2m-57-7Tm"/>
                             <constraint firstItem="RXJ-nE-nz9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="dbe-Sz-Dln"/>
                             <constraint firstItem="PXw-tQ-r7K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fCe-s3-124"/>
+                            <constraint firstItem="M1u-bq-mVq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="juZ-hc-mtd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PXw-tQ-r7K" secondAttribute="trailing" constant="20" id="mRg-hY-Xy6"/>
                         </constraints>
                     </view>
@@ -57,6 +67,7 @@
                         <outlet property="filterTextField" destination="PXw-tQ-r7K" id="U8C-Dp-tqI"/>
                         <outlet property="foodSegmentedControl" destination="RXJ-nE-nz9" id="QO8-jU-373"/>
                         <outlet property="mapView" destination="Jv7-BU-mhm" id="d9w-Qf-Z6B"/>
+                        <outlet property="textFieldCoverView" destination="M1u-bq-mVq" id="IOb-Nk-xtk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
