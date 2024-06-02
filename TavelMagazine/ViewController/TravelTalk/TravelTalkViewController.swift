@@ -25,7 +25,15 @@ class TravelTalkViewController: UIViewController {
         }
     }
     
-    private var chatRoomList = mockChatList
+    private var chatRoomList = mockChatList {
+        
+        didSet {
+            guard let text = userChattingRoomSearchBar.text else { return }
+            
+            searchChatRoom(query: text)
+        }
+    }
+    
     private var filteredChatRoomList: [ChatRoom] = [] {
         
         didSet {
@@ -108,6 +116,8 @@ extension TravelTalkViewController: UITableViewDataSource {
         let chattingRoomViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! ChattingRoomViewController
         
         chattingRoomViewController.chatRoom = chatRoom
+        chattingRoomViewController.row = index
+        chattingRoomViewController.delegate = self
         
         navigationController?.pushViewController(chattingRoomViewController, animated: true)
         
@@ -131,5 +141,13 @@ extension TravelTalkViewController: UISearchBarDelegate {
         }
         
         filteredChatRoomList = chatRoomList.filter { $0.chatroomName.contains(query) }
+    }
+}
+
+extension TravelTalkViewController: TravelTalkDelegate {
+    
+    public func sendMessage(_ row: Int, chatRoom: ChatRoom) {
+        
+        chatRoomList[row] = chatRoom
     }
 }

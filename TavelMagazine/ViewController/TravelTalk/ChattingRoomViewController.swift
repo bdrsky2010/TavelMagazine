@@ -32,13 +32,17 @@ class ChattingRoomViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     
     private let placeholder = "message"
+    public var delegate: TravelTalkDelegate?
     
+    public var row: Int?
     public var chatRoom: ChatRoom? {
         
         didSet {
-            if let chatRoom, let chatTableView {
+            if let chatRoom, let chatTableView, let row {
                 chatTableView.reloadData()
                 chatTableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count - 1, section: 0), at: .bottom, animated: true)
+                
+                delegate?.sendMessage(row, chatRoom: chatRoom)
             }
         }
     }
@@ -178,10 +182,11 @@ extension ChattingRoomViewController: UITableViewDataSource {
         chatTableView.rowHeight = UITableView.automaticDimension
         chatTableView.keyboardDismissMode = .onDrag
         
-        let identifier = ReceptionMessageTableViewCell.identifier
+        let receptionNib = UINib(nibName: ReceptionMessageTableViewCell.identifier, bundle: nil)
+        chatTableView.register(receptionNib, forCellReuseIdentifier: ReceptionMessageTableViewCell.identifier)
         
-        let nib = UINib(nibName: identifier, bundle: nil)
-        chatTableView.register(nib, forCellReuseIdentifier: identifier)
+        let outgoingNib = UINib(nibName: OutgoingMessageTableViewCell.identifier, bundle: nil)
+        chatTableView.register(outgoingNib, forCellReuseIdentifier: OutgoingMessageTableViewCell.identifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -192,11 +197,26 @@ extension ChattingRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let index = indexPath.row
-        let identifier = ReceptionMessageTableViewCell.identifier
-        
-        let cell = chatTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ReceptionMessageTableViewCell
-        
         let chat = chatRoom?.chatList[index]
+        var identifier: String
+        
+        if chat?.user == .user {
+            
+            identifier = ReceptionMessageTableViewCell.identifier
+            
+            let cell = chatTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ReceptionMessageTableViewCell
+            
+            cell.chat = chat
+            
+            cell.configureCellContents(chat)
+            
+            return cell
+        }
+        
+        identifier = OutgoingMessageTableViewCell.identifier
+        
+        let cell = chatTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! OutgoingMessageTableViewCell
+        
         cell.chat = chat
         
         cell.configureCellContents(chat)
