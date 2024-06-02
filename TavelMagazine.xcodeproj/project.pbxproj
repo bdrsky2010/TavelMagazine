@@ -36,6 +36,7 @@
 		7B5C12FE2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C12FC2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib */; };
 		7B5C13012C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12FF2C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift */; };
 		7B5C13022C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C13002C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib */; };
+		7B5C13042C0CCDBB0096DE9E /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C13032C0CCDBB0096DE9E /* Date+.swift */; };
 		7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */; };
 		7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */; };
 		7B6CC59B2C049DA300FBFF21 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC59A2C049DA300FBFF21 /* UIImageView+.swift */; };
@@ -91,6 +92,7 @@
 		7B5C12FC2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		7B5C12FF2C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiChattingRoomTableViewCell.swift; sourceTree = "<group>"; };
 		7B5C13002C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
+		7B5C13032C0CCDBB0096DE9E /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineViewController.swift; sourceTree = "<group>"; };
 		7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MagazineTableViewCell.xib; sourceTree = "<group>"; };
 		7B6CC59A2C049DA300FBFF21 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				7B6CC59A2C049DA300FBFF21 /* UIImageView+.swift */,
 				7B5C12A92C07121E0096DE9E /* UINavigationController+.swift */,
 				7B5C12B92C071A130096DE9E /* String+.swift */,
+				7B5C13032C0CCDBB0096DE9E /* Date+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				7B5C12B12C0717A40096DE9E /* PopularCityViewController.swift in Sources */,
 				7B5C12F62C0C63430096DE9E /* ReuseIdentifierProtocol.swift in Sources */,
 				7B6CC59D2C04A3F500FBFF21 /* CityDetailInfoViewController.swift in Sources */,
+				7B5C13042C0CCDBB0096DE9E /* Date+.swift in Sources */,
 				7B6CC5A72C04A74F00FBFF21 /* MainTabBarController.swift in Sources */,
 				7B5C12ED2C0C61D20096DE9E /* ReceptionMessageTableViewCell.swift in Sources */,
 				7B5C12F42C0C63010096DE9E /* ChattingRoomViewController.swift in Sources */,

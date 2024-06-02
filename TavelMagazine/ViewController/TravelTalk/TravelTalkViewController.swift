@@ -110,6 +110,8 @@ extension TravelTalkViewController: UITableViewDataSource {
         chattingRoomViewController.chatRoom = chatRoom
         
         navigationController?.pushViewController(chattingRoomViewController, animated: true)
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 
