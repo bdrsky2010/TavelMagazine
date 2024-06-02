@@ -15,18 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gXA-9s-RN4">
+                                <rect key="frame" x="12" y="59" width="369" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Pvq-tt-n5I"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Zja-5s-xDC"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gi5-Lw-g2H">
+                                <rect key="frame" x="0.0" y="129" width="393" height="689"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gi5-Lw-g2H" secondAttribute="trailing" id="8kd-4b-p2T"/>
+                            <constraint firstItem="gXA-9s-RN4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Dsw-cC-Eb3"/>
+                            <constraint firstItem="gi5-Lw-g2H" firstAttribute="top" secondItem="gXA-9s-RN4" secondAttribute="bottom" id="a43-Md-gAK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gi5-Lw-g2H" secondAttribute="bottom" id="bMT-Rn-4TG"/>
+                            <constraint firstAttribute="trailing" secondItem="gXA-9s-RN4" secondAttribute="trailing" constant="12" id="eha-iM-uxo"/>
+                            <constraint firstItem="gi5-Lw-g2H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fBy-Ly-EER"/>
+                            <constraint firstItem="gXA-9s-RN4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="y5K-qk-8wv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chattingRoomTableView" destination="gi5-Lw-g2H" id="uzw-Y3-IsG"/>
+                        <outlet property="userChattingRoomSearchBar" destination="gXA-9s-RN4" id="1sd-XB-Q0k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="5"/>
         </scene>
-        <!--View Controller-->
+        <!--Chtting Room View Controller-->
         <scene sceneID="ikm-xT-Bs1">
             <objects>
-                <viewController id="Xl4-H9-kHZ" sceneMemberID="viewController">
+                <viewController id="Xl4-H9-kHZ" customClass="ChttingRoomViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOL-PG-nl8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

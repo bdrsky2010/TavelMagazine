@@ -7,6 +7,7 @@
 
 import UIKit
 
-protocol CellToMoveViewControllerProtocol {
-    func configureNavigation()
+@objc
+protocol ConfigureViewControllerProtocol {
+    @objc optional func configureNavigation()
 }

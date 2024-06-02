@@ -164,7 +164,7 @@ extension TouristSpotViewController {
     }
 }
 
-extension TouristSpotViewController: CellToMoveViewControllerProtocol {
+extension TouristSpotViewController: ConfigureViewControllerProtocol {
     
     func configureNavigation() {
         

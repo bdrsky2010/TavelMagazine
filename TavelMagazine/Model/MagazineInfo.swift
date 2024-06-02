@@ -31,19 +31,3 @@ struct Magazine {
         Magazine(title: "여행 고수가 알려주는 새벽 비행기 이용 꿀팁", subtitle: "이제 공항에서 시간 때울 걱정 끝!", photo_image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVCJUI5JTg0JUVEJTk2JTg5JUVBJUI4JUIwfGVufDB8fDB8fHww", date: "240105", link: "https://triple.guide/content/articles/791578f3-95d7-4300-a51f-6dff48db5d55")
     ]
 }
-
-extension String {
-    var convertStrDate: String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyMMdd"
-        
-        guard let convertDate = dateFormatter.date(from: self) else { return nil }
-        
-        let newDateFormatter = DateFormatter()
-        newDateFormatter.dateFormat = "yy년 MM월 dd일"
-        newDateFormatter.locale = Locale(identifier: "ko_KR")
-        
-        let convertStrDate = newDateFormatter.string(from: convertDate)
-        return convertStrDate
-    }
-}

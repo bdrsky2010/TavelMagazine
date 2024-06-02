@@ -24,7 +24,7 @@ class AdvertiseViewController: UIViewController {
 
 // MARK: configure CellToPushViewControllerProtocol
 // Configure UI
-extension AdvertiseViewController: CellToMoveViewControllerProtocol {
+extension AdvertiseViewController: ConfigureViewControllerProtocol {
     private func configureUI() {
         guard let backgroundColor, let adContents else { return }
         

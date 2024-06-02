@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B5C12A32C0705670096DE9E /* TouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12A22C0705670096DE9E /* TouristSpotViewController.swift */; };
 		7B5C12A52C07058B0096DE9E /* AdvertiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12A42C07058B0096DE9E /* AdvertiseViewController.swift */; };
-		7B5C12A82C07079D0096DE9E /* CellToMoveViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12A72C07079D0096DE9E /* CellToMoveViewControllerProtocol.swift */; };
+		7B5C12A82C07079D0096DE9E /* ConfigureViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12A72C07079D0096DE9E /* ConfigureViewControllerProtocol.swift */; };
 		7B5C12AA2C07121E0096DE9E /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12A92C07121E0096DE9E /* UINavigationController+.swift */; };
 		7B5C12AC2C0716960096DE9E /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12AB2C0716960096DE9E /* CityInfo.swift */; };
 		7B5C12AE2C0717670096DE9E /* PopularCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C12AD2C0717670096DE9E /* PopularCity.storyboard */; };
@@ -32,6 +32,10 @@
 		7B5C12F62C0C63430096DE9E /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12F52C0C63430096DE9E /* ReuseIdentifierProtocol.swift */; };
 		7B5C12F82C0C63960096DE9E /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12F72C0C63950096DE9E /* UIViewController+.swift */; };
 		7B5C12FA2C0C64010096DE9E /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12F92C0C64010096DE9E /* UITableViewCell+.swift */; };
+		7B5C12FD2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12FB2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.swift */; };
+		7B5C12FE2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C12FC2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib */; };
+		7B5C13012C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C12FF2C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift */; };
+		7B5C13022C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C13002C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib */; };
 		7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */; };
 		7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */; };
 		7B6CC59B2C049DA300FBFF21 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC59A2C049DA300FBFF21 /* UIImageView+.swift */; };
@@ -60,7 +64,7 @@
 /* Begin PBXFileReference section */
 		7B5C12A22C0705670096DE9E /* TouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSpotViewController.swift; sourceTree = "<group>"; };
 		7B5C12A42C07058B0096DE9E /* AdvertiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiseViewController.swift; sourceTree = "<group>"; };
-		7B5C12A72C07079D0096DE9E /* CellToMoveViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellToMoveViewControllerProtocol.swift; sourceTree = "<group>"; };
+		7B5C12A72C07079D0096DE9E /* ConfigureViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewControllerProtocol.swift; sourceTree = "<group>"; };
 		7B5C12A92C07121E0096DE9E /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		7B5C12AB2C0716960096DE9E /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		7B5C12AD2C0717670096DE9E /* PopularCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularCity.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,10 @@
 		7B5C12F52C0C63430096DE9E /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 		7B5C12F72C0C63950096DE9E /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		7B5C12F92C0C64010096DE9E /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		7B5C12FB2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChattingRoomTableViewCell.swift; sourceTree = "<group>"; };
+		7B5C12FC2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
+		7B5C12FF2C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiChattingRoomTableViewCell.swift; sourceTree = "<group>"; };
+		7B5C13002C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineViewController.swift; sourceTree = "<group>"; };
 		7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MagazineTableViewCell.xib; sourceTree = "<group>"; };
 		7B6CC59A2C049DA300FBFF21 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
@@ -153,7 +161,7 @@
 		7B5C12A62C0707080096DE9E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				7B5C12A72C07079D0096DE9E /* CellToMoveViewControllerProtocol.swift */,
+				7B5C12A72C07079D0096DE9E /* ConfigureViewControllerProtocol.swift */,
 				7B5C12F52C0C63430096DE9E /* ReuseIdentifierProtocol.swift */,
 			);
 			path = Protocol;
@@ -218,6 +226,10 @@
 		7B5C12E82C0C590A0096DE9E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C12FB2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.swift */,
+				7B5C12FC2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib */,
+				7B5C12FF2C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift */,
+				7B5C13002C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib */,
 				7B5C12EB2C0C61D20096DE9E /* ReceptionMessageTableViewCell.swift */,
 				7B5C12EC2C0C61D20096DE9E /* ReceptionMessageTableViewCell.xib */,
 				7B5C12EF2C0C61EF0096DE9E /* OutgoingMessageTableViewCell.swift */,
@@ -377,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5C12E52C0C57530096DE9E /* TravelTalk.storyboard in Resources */,
+				7B5C13022C0C73D30096DE9E /* MultiChattingRoomTableViewCell.xib in Resources */,
 				7BBED3762C035DFE0095FA9F /* .gitignore in Resources */,
 				7BBED37D2C0370210095FA9F /* Magazine.storyboard in Resources */,
 				7B6CC5B02C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib in Resources */,
@@ -390,6 +403,7 @@
 				7B5C12AE2C0717670096DE9E /* PopularCity.storyboard in Resources */,
 				7B5C12EE2C0C61D20096DE9E /* ReceptionMessageTableViewCell.xib in Resources */,
 				7B6CC5A52C04A65800FBFF21 /* CityDetailInfo.storyboard in Resources */,
+				7B5C12FE2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.xib in Resources */,
 				7B6CC5992C0497B900FBFF21 /* MagazineTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,11 +427,13 @@
 				7B5C12F42C0C63010096DE9E /* ChttingRoomViewController.swift in Sources */,
 				7BBED37F2C0370B40095FA9F /* MagazineTableViewController.swift in Sources */,
 				7B5C12F12C0C61EF0096DE9E /* OutgoingMessageTableViewCell.swift in Sources */,
-				7B5C12A82C07079D0096DE9E /* CellToMoveViewControllerProtocol.swift in Sources */,
+				7B5C12A82C07079D0096DE9E /* ConfigureViewControllerProtocol.swift in Sources */,
 				7BBED3662C035DDF0095FA9F /* ViewController.swift in Sources */,
 				7BBED3782C035E320095FA9F /* MagazineInfo.swift in Sources */,
+				7B5C12FD2C0C6D460096DE9E /* SingleChattingRoomTableViewCell.swift in Sources */,
 				7B6CC59B2C049DA300FBFF21 /* UIImageView+.swift in Sources */,
 				7B5C12A52C07058B0096DE9E /* AdvertiseViewController.swift in Sources */,
+				7B5C13012C0C73D30096DE9E /* MultiChattingRoomTableViewCell.swift in Sources */,
 				7B6CC5B12C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift in Sources */,
 				7BBED3812C0371A10095FA9F /* MagazineTableViewCell.swift in Sources */,
 				7B5C12EA2C0C5D580096DE9E /* ChattingData.swift in Sources */,
