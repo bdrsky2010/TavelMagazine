@@ -98,6 +98,19 @@ extension TravelTalkViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let chatRoom = filteredChatRoomList[index]
+        
+        let identifier = ChattingRoomViewController.identifier
+        
+        let chattingRoomViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! ChattingRoomViewController
+        
+        chattingRoomViewController.chatRoom = chatRoom
+        
+        navigationController?.pushViewController(chattingRoomViewController, animated: true)
+    }
 }
 
 extension TravelTalkViewController: UISearchBarDelegate {

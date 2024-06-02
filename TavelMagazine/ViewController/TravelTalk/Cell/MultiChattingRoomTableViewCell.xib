@@ -112,6 +112,7 @@
                 <outlet property="lastChatContentsLabel" destination="dcy-Wd-lDu" id="gdx-CO-5c8"/>
                 <outlet property="lastChatDateLabel" destination="c25-Wp-Zct" id="MKf-NI-5Gj"/>
                 <outlet property="nicknameLabel" destination="Hd9-Gn-Rrb" id="zPK-Gc-O8E"/>
+                <outlet property="profileImageBackground" destination="tAw-kh-EkO" id="z4L-uu-aDD"/>
                 <outletCollection property="profileImageViewList" destination="r09-1T-tUG" collectionClass="NSMutableArray" id="Vp9-31-GLp"/>
                 <outletCollection property="profileImageViewList" destination="b0p-LT-rWv" collectionClass="NSMutableArray" id="qL2-Zr-xkV"/>
                 <outletCollection property="profileImageViewList" destination="FgH-Lg-apc" collectionClass="NSMutableArray" id="shA-KM-Jtm"/>

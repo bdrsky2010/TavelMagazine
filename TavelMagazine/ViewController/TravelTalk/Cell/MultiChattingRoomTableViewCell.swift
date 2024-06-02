@@ -11,6 +11,7 @@ class MultiChattingRoomTableViewCell: UITableViewCell {
 
     @IBOutlet var profileImageViewList: [UIImageView]!
     
+    @IBOutlet weak var profileImageBackground: UIView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var headCountLabel: UILabel!
     @IBOutlet weak var lastChatContentsLabel: UILabel!
@@ -39,6 +40,8 @@ class MultiChattingRoomTableViewCell: UITableViewCell {
     }
     
     private func configureProfileImageView() {
+        
+        profileImageBackground.layer.cornerRadius = 10
         
         profileImageViewList.forEach { imageView in
             
