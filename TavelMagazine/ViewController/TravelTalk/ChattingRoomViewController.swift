@@ -121,6 +121,8 @@ extension ChattingRoomViewController {
     }
 }
 
+// intrinsic content size
+
 extension ChattingRoomViewController: ConfigureViewControllerProtocol {
     
     func configureNavigation() {
@@ -179,6 +181,7 @@ extension ChattingRoomViewController: UITableViewDataSource {
     private func configureTableView() {
         
         chatTableView.separatorStyle = .none
+        chatTableView.allowsSelection = false
         chatTableView.rowHeight = UITableView.automaticDimension
         chatTableView.keyboardDismissMode = .onDrag
         
