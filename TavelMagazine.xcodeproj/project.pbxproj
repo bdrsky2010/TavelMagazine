@@ -110,6 +110,7 @@
 		7B5C12A02C0704C00096DE9E /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C12E02C0C56410096DE9E /* Cell */,
 				7B6CC5962C04977300FBFF21 /* MagazineViewController.swift */,
 			);
 			path = Magazine;
@@ -118,6 +119,7 @@
 		7B5C12A12C0704D40096DE9E /* CityDetailInfo */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C12E12C0C564D0096DE9E /* Cell */,
 				7B5C12DE2C0C1B680096DE9E /* TravelDelegate.swift */,
 				7B6CC59C2C04A3F500FBFF21 /* CityDetailInfoViewController.swift */,
 				7B5C12A22C0705670096DE9E /* TouristSpotViewController.swift */,
@@ -137,38 +139,10 @@
 		7B5C12AF2C0717820096DE9E /* PopularCity */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C12E22C0C56570096DE9E /* Cell */,
 				7B5C12B02C0717A40096DE9E /* PopularCityViewController.swift */,
 			);
 			path = PopularCity;
-			sourceTree = "<group>";
-		};
-		7B5C12B22C07188D0096DE9E /* PopularCity */ = {
-			isa = PBXGroup;
-			children = (
-				7B5C12B52C0718F10096DE9E /* PopularCityTableViewCell.swift */,
-				7B5C12B62C0718F10096DE9E /* PopularCityTableViewCell.xib */,
-			);
-			path = PopularCity;
-			sourceTree = "<group>";
-		};
-		7B5C12B32C0718900096DE9E /* CityDetailInfo */ = {
-			isa = PBXGroup;
-			children = (
-				7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */,
-				7B6CC5AA2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift */,
-				7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */,
-				7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */,
-			);
-			path = CityDetailInfo;
-			sourceTree = "<group>";
-		};
-		7B5C12B42C0718940096DE9E /* Magazine */ = {
-			isa = PBXGroup;
-			children = (
-				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
-				7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */,
-			);
-			path = Magazine;
 			sourceTree = "<group>";
 		};
 		7B5C12CA2C087B590096DE9E /* Restaurant */ = {
@@ -177,6 +151,35 @@
 				7B5C12CB2C087B730096DE9E /* RestaurantViewController.swift */,
 			);
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		7B5C12E02C0C56410096DE9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B6CC5982C0497B900FBFF21 /* MagazineTableViewCell.xib */,
+				7BBED3802C0371A10095FA9F /* MagazineTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7B5C12E12C0C564D0096DE9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */,
+				7B6CC5AA2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift */,
+				7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */,
+				7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7B5C12E22C0C56570096DE9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C12B52C0718F10096DE9E /* PopularCityTableViewCell.swift */,
+				7B5C12B62C0718F10096DE9E /* PopularCityTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7B6CC59E2C04A4E400FBFF21 /* Storyboard */ = {
@@ -213,16 +216,6 @@
 				7B5C12CA2C087B590096DE9E /* Restaurant */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		7B6CC5A22C04A53700FBFF21 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				7B5C12B42C0718940096DE9E /* Magazine */,
-				7B5C12B32C0718900096DE9E /* CityDetailInfo */,
-				7B5C12B22C07188D0096DE9E /* PopularCity */,
-			);
-			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		7B6CC5B22C04CF5E00FBFF21 /* Extension */ = {
@@ -264,7 +257,6 @@
 				7B6CC59E2C04A4E400FBFF21 /* Storyboard */,
 				7B6CC59F2C04A50300FBFF21 /* Model */,
 				7B6CC5A12C04A52C00FBFF21 /* ViewController */,
-				7B6CC5A22C04A53700FBFF21 /* TableViewCell */,
 				7B6CC5B22C04CF5E00FBFF21 /* Extension */,
 				7B5C12A62C0707080096DE9E /* Protocol */,
 			);
