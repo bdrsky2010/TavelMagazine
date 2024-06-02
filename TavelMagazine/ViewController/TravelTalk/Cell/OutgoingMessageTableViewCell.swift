@@ -33,6 +33,7 @@ class OutgoingMessageTableViewCell: UITableViewCell {
 extension OutgoingMessageTableViewCell {
     
     private func configureUI() {
+        configureNicknameLabel()
         configureMessageBackgroundView()
         configureMessageLabel()
         configureSendTimeLabel()
