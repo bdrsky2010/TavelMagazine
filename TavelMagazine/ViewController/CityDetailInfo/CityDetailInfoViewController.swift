@@ -22,6 +22,16 @@ class CityDetailInfoViewController: UIViewController {
     }
 }
 
+// MARK: Configure TravelDelegate
+extension CityDetailInfoViewController: TravelDelegate {
+    
+    func setCityCellLike(_ row: Int) {
+        
+        cityInfoList[row].like?.toggle()
+        cityTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+    }
+}
+
 // MARK: Configure TableView
 extension CityDetailInfoViewController {
     
@@ -81,9 +91,13 @@ extension CityDetailInfoViewController: UITableViewDelegate {
         identifier = TouristSpotViewController.identifier
         
         let vc = storyboard?.instantiateViewController(withIdentifier: identifier) as! TouristSpotViewController
+        let stringURL = "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F543cf73d-3746-44e3-b9b5-ff66847a8600%2F5876bf0b-6f27-42e5-bfe5-65cf8848c547%2F(%25EC%25B6%2595%25EC%2595%25BD)%25EC%2583%2588%25EC%258B%25B9SeSAC_CI.png&blockId=ad17acdf-4df8-4e4a-85d2-a99b0643cdf4&width=256"
+        
+        vc.delegate = self
+        vc.row = index
         
         vc.travel = cityInfo
-        vc.profileImageURL = "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F543cf73d-3746-44e3-b9b5-ff66847a8600%2F5876bf0b-6f27-42e5-bfe5-65cf8848c547%2F(%25EC%25B6%2595%25EC%2595%25BD)%25EC%2583%2588%25EC%258B%25B9SeSAC_CI.png&blockId=ad17acdf-4df8-4e4a-85d2-a99b0643cdf4&width=256".stringToURL
+        vc.profileImageURL = stringURL.stringToURL
         vc.profileName = "SeSAC"
         
         navigationController?.pushViewController(vc, animated: true)
@@ -92,10 +106,6 @@ extension CityDetailInfoViewController: UITableViewDelegate {
 
 // MARK: Configure UITableViewDataSource
 extension CityDetailInfoViewController: UITableViewDataSource {
-    
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        return cityInfoList[indexPath.row].ad ? 70 : 160
-    //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row

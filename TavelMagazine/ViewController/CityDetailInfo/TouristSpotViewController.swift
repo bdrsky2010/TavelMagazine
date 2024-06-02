@@ -25,6 +25,9 @@ class TouristSpotViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    public var row: Int?
+    public var delegate: TravelDelegate?
+    
     public var travel: Travel?
     public var profileImageURL: URL?
     public var profileName: String?
@@ -66,17 +69,40 @@ extension TouristSpotViewController {
     }
     
     private func configureTopNicknameLabel(nickname: String) {
+        
         configureLabel(topNicknameLabel, text: nickname, font: UIFont.systemFont(ofSize: 14, weight: .bold))
     }
     
     private func configureMainImageView(imageURL: URL?) {
+        
         configureImageView(mainImageView, url: imageURL, contentMode: .scaleAspectFill)
     }
     
     private func configureLikeImageView(isLike: Bool) {
+        
         configureImageView(likeImageView,
                            systemName: isLike ? "heart.fill" : "heart",
-                           tintColor: isLike ? .systemRed : .label)
+                           tintColor: .systemRed)
+        
+        let likeTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(likeImageTapped))
+        
+        likeImageView.isUserInteractionEnabled = true
+        likeImageView.addGestureRecognizer(likeTapGestureRecognizer)
+    }
+    
+    @objc
+    private func likeImageTapped(sender: UITapGestureRecognizer) {
+        
+        guard let row else { return }
+        
+        travel?.like?.toggle()
+        delegate?.setCityCellLike?(row)
+        
+        if let isLike = travel?.like {
+            configureImageView(likeImageView,
+                               systemName: isLike ? "heart.fill" : "heart",
+                               tintColor: .systemRed)
+        }
     }
     
     private func configureNumberOfSaveLabel(numberOfSave: String) {
@@ -86,6 +112,7 @@ extension TouristSpotViewController {
     private func configureStarImageViewList(grade: Int) {
         
         starImageViewList.enumerated().forEach {
+            
             let index = $0.offset
             let imageView = $0.element
             
@@ -97,24 +124,29 @@ extension TouristSpotViewController {
     }
     
     private func configureGradeLabel(grade: Double) {
+        
         configureLabel(gradeLabel,
                        text: "(\(grade))",
                        font: .systemFont(ofSize: 14, weight: .bold))
     }
     
     private func configureBottomNicknameLabel(nickname: String) {
+        
         configureLabel(bottomNicknameLabel, text: nickname, font: UIFont.systemFont(ofSize: 14, weight: .bold))
     }
     
     private func configureTitleLabel(title: String) {
+        
         configureLabel(titleLabel, text: title, font: UIFont.systemFont(ofSize: 15, weight: .regular))
     }
     
     private func configureDescriptionLabel(description: String) {
+        
         configureLabel(descriptionLabel, text: description, font: UIFont.systemFont(ofSize: 14, weight: .regular))
     }
     
     private func configureImageView(_ imageView: UIImageView, url: URL? = nil, systemName: String? = nil, contentMode: UIView.ContentMode? = nil, tintColor: UIColor? = nil, cornerRadius: CGFloat? = nil, borderColor: CGColor? = nil, borderWidth: CGFloat? = nil) {
+        
         if let url { imageView.configureImageWithKF(url: url) }
         if let systemName { imageView.image = UIImage(systemName: systemName) }
         if let contentMode { imageView.contentMode = contentMode }
@@ -137,6 +169,7 @@ extension TouristSpotViewController {
 extension TouristSpotViewController: CellToMoveViewControllerProtocol {
     
     func configureNavigation() {
+        
         navigationItem.title = travel?.title
         navigationController?.navigationBar.tintColor = .label
         
@@ -149,6 +182,7 @@ extension TouristSpotViewController: CellToMoveViewControllerProtocol {
     
     @objc
     private func leftBarButtonAction() {
+        
         navigationController?.popViewController(animated: true)
     }
 }

@@ -24,7 +24,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()
-        print(#function)
+        
     }
     
     // root view의 sub view를 그릴 때 호출
@@ -32,7 +32,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
     // 여기서 작성
     override func layoutSubviews() {
         super.layoutSubviews()
-        print(#function)
+        
     }
     
     // cell이 재사용되기 전에 호출
@@ -40,7 +40,7 @@ class CityDetailInfoTableViewCell: UITableViewCell {
     // 여기에 작성
     override func prepareForReuse() {
         super.prepareForReuse()
-        print(#function)
+        
     }
     
     private func configureUI() {

@@ -83,7 +83,7 @@ extension RestaurantViewController {
     
     @objc
     private func textFieldCoverTapAction() {
-        filterTextField.becomeFirstResponder()
+        filterTextField.becomeFirstResponder() // 텍스트 필드에 포커스 (편집 상태로 변경)
     }
 }
 
