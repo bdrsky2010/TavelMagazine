@@ -9,8 +9,6 @@ import UIKit
 import Kingfisher
 
 class PopularCityTableViewCell: UITableViewCell {
-
-    static let reuseIdentifier = "PopularCityTableViewCell"
     
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak var cellView: UIView!

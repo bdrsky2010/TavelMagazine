@@ -101,9 +101,9 @@ extension PopularCityViewController {
 // MARK: Configure TableView
 extension PopularCityViewController {
     private func configureTableView() {
-        let nib = UINib(nibName: PopularCityTableViewCell.reuseIdentifier, bundle: nil)
+        let nib = UINib(nibName: PopularCityTableViewCell.identifier, bundle: nil)
         
-        popularCityTableView.register(nib, forCellReuseIdentifier: PopularCityTableViewCell.reuseIdentifier)
+        popularCityTableView.register(nib, forCellReuseIdentifier: PopularCityTableViewCell.identifier)
         
         popularCityTableView.delegate = self
         popularCityTableView.dataSource = self
@@ -130,7 +130,7 @@ extension PopularCityViewController: UITableViewDataSource {
         let index = indexPath.row
         let city = filteredList[index]
         
-        let identifier = PopularCityTableViewCell.reuseIdentifier
+        let identifier = PopularCityTableViewCell.identifier
         
         let cell = popularCityTableView.dequeueReusableCell(withIdentifier: identifier,
                                                             for: indexPath) as! PopularCityTableViewCell

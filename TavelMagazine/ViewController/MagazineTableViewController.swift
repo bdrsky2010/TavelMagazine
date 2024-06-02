@@ -22,7 +22,7 @@ class MagazineTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = MagazineTableViewCell.reuseIdentifier
+        let identifier = MagazineTableViewCell.identifier
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MagazineTableViewCell
         
         let index = indexPath.row

@@ -9,8 +9,6 @@ import UIKit
 import MapKit
 
 class RestaurantViewController: UIViewController {
-
-    static let identifier = "RestaurantViewController"
     
     @IBOutlet weak var filterTextField: UITextField!
     @IBOutlet weak var textFieldCoverView: UIView!

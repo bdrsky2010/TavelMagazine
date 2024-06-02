@@ -8,8 +8,6 @@
 import UIKit
 
 class TouristSpotViewController: UIViewController {
-
-    static let identifier = "TouristSpotViewController"
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var topNicknameLabel: UILabel!

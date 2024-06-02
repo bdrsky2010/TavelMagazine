@@ -10,8 +10,6 @@ import Kingfisher
 
 class MagazineTableViewCell: UITableViewCell {
 
-    static let reuseIdentifier =  "MagazineTableViewCell"
-    
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var infoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

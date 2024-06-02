@@ -8,8 +8,6 @@
 import UIKit
 
 class AdvertiseTableViewCell: UITableViewCell {
-
-    static let reuseIdentifier = "AdvertiseTableViewCell"
     
     @IBOutlet weak var adCellView: UIView!
     @IBOutlet weak var adTitleView: UIView!

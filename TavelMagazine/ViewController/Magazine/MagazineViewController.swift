@@ -30,8 +30,8 @@ extension MagazineViewController {
 //        magazineTableView.rowHeight = 450
         magazineTableView.separatorStyle = .none
         
-        let nib = UINib(nibName: MagazineTableViewCell.reuseIdentifier, bundle: nil)
-        magazineTableView.register(nib, forCellReuseIdentifier: MagazineTableViewCell.reuseIdentifier)
+        let nib = UINib(nibName: MagazineTableViewCell.identifier, bundle: nil)
+        magazineTableView.register(nib, forCellReuseIdentifier: MagazineTableViewCell.identifier)
     }
 }
 
@@ -48,7 +48,7 @@ extension MagazineViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = MagazineTableViewCell.reuseIdentifier
+        let identifier = MagazineTableViewCell.identifier
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MagazineTableViewCell
         
         let index = indexPath.row

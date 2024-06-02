@@ -20,11 +20,12 @@
                         <segue destination="Qmn-S3-n22" kind="relationship" relationship="viewControllers" id="7VC-cp-Wph"/>
                         <segue destination="UrD-9S-5ZW" kind="relationship" relationship="viewControllers" id="HMl-6R-Qxd"/>
                         <segue destination="Q6S-6J-ND4" kind="relationship" relationship="viewControllers" id="pah-aR-Hdx"/>
+                        <segue destination="WoU-Rj-2Zr" kind="relationship" relationship="viewControllers" id="tGX-XK-eRq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Inp-sx-pAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1348" y="-35"/>
+            <point key="canvasLocation" x="-1811" y="627"/>
         </scene>
         <!--Magazine-->
         <scene sceneID="pfr-xL-035">
@@ -104,6 +105,16 @@
             </objects>
             <point key="canvasLocation" x="468" y="1285"/>
         </scene>
+        <!--TravelTalk-->
+        <scene sceneID="dbg-dc-Mbc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TravelTalk" id="1km-Pp-Xxo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cVS-Vt-t51"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBL-VA-Jvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="1930"/>
+        </scene>
         <!--City-->
         <scene sceneID="mB7-tJ-kfo">
             <objects>
@@ -142,11 +153,31 @@
             </objects>
             <point key="canvasLocation" x="-277" y="1285"/>
         </scene>
+        <!--TravelTalk-->
+        <scene sceneID="j6I-Td-2MZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WoU-Rj-2Zr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TravelTalk" image="message.circle.fill" catalog="system" id="7ri-Tv-hYm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPT-pv-9q9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1km-Pp-Xxo" kind="relationship" relationship="rootViewController" id="fqn-oB-2oV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yib-yJ-xw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="1930"/>
+        </scene>
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
         <image name="figure.core.training" catalog="system" width="128" height="48"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
+        <image name="message.circle.fill" catalog="system" width="128" height="123"/>
     </resources>
 </document>

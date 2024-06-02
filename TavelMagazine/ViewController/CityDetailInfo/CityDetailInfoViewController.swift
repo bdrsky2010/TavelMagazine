@@ -41,11 +41,11 @@ extension CityDetailInfoViewController {
         cityTableView.delegate = self
         cityTableView.dataSource = self
         
-        let cityNib = UINib(nibName: CityDetailInfoTableViewCell.reuseIdentifier, bundle: nil)
-        let adNib = UINib(nibName: AdvertiseTableViewCell.reuseIdentifier, bundle: nil)
+        let cityNib = UINib(nibName: CityDetailInfoTableViewCell.identifier, bundle: nil)
+        let adNib = UINib(nibName: AdvertiseTableViewCell.identifier, bundle: nil)
         
-        cityTableView.register(cityNib, forCellReuseIdentifier: CityDetailInfoTableViewCell.reuseIdentifier)
-        cityTableView.register(adNib, forCellReuseIdentifier: AdvertiseTableViewCell.reuseIdentifier)
+        cityTableView.register(cityNib, forCellReuseIdentifier: CityDetailInfoTableViewCell.identifier)
+        cityTableView.register(adNib, forCellReuseIdentifier: AdvertiseTableViewCell.identifier)
         
         cityTableView.rowHeight = UITableView.automaticDimension
     }
@@ -115,7 +115,7 @@ extension CityDetailInfoViewController: UITableViewDataSource {
         
         if cityInfo.ad { // 광고 속성이 True인 경우
             
-            identifier = AdvertiseTableViewCell.reuseIdentifier
+            identifier = AdvertiseTableViewCell.identifier
             
             let cell = cityTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! AdvertiseTableViewCell
             
@@ -125,7 +125,7 @@ extension CityDetailInfoViewController: UITableViewDataSource {
         }
         
         // 광고 속성이 False인 경우
-        identifier = CityDetailInfoTableViewCell.reuseIdentifier
+        identifier = CityDetailInfoTableViewCell.identifier
         
         let cell = cityTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CityDetailInfoTableViewCell
         

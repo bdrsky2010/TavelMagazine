@@ -8,8 +8,6 @@
 import UIKit
 
 class AdvertiseViewController: UIViewController {
-
-    static let identifier = "AdvertiseViewController"
     
     @IBOutlet weak var titleLabel: UILabel!
     
