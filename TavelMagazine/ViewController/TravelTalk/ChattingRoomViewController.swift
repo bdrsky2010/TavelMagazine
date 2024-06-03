@@ -32,8 +32,8 @@ class ChattingRoomViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     
     private let placeholder = "message"
-    public var delegate: TravelTalkDelegate?
     
+    public var delegate: TravelTalkDelegate?
     public var row: Int?
     public var chatRoom: ChatRoom? {
         
@@ -229,11 +229,13 @@ extension ChattingRoomViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-//        let index = indexPath.row
-//        
-//        if let chatRoom, index == chatRoom.chatList.count - 2 {
-//            print(index)
-//            tableView.scrollToRow(at: IndexPath(row: index + 1, section: 0), at: .bottom, animated: true)
-//        }
+        // 마지막 셀이 보여지게 되면 마지막 셀의 bottom으로 scroll을 이동
+        if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
+            
+            if indexPath == lastVisibleIndexPath {
+                
+                tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            }
+        }
     }
 }
