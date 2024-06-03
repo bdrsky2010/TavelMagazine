@@ -9,6 +9,7 @@ import UIKit
 
 final class ReceptionMessageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var messageCellView: UIView!
     @IBOutlet weak var messageBackgroundView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var sendTimeLabel: UILabel!

@@ -14,7 +14,7 @@ final class ChattingRoomViewController: UIViewController {
     @IBOutlet weak var messageTextView: UITextView! {
         
         didSet {
-            
+            messageTextView.isScrollEnabled = false
             messageTextView.delegate = self
         }
     }
@@ -49,13 +49,20 @@ final class ChattingRoomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureNavigation()
         
         configureUI()
         configureKeyboardNotification()
         configureTableView()
         configureMessageTextView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard let chatRoom, !chatRoom.chatList.isEmpty else { return }
+        chatTableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count - 1, section: 0), at: .bottom, animated: false)
     }
 }
 
@@ -89,6 +96,19 @@ extension ChattingRoomViewController {
             chatRoom?.chatList.append(Chat(user: .user, date: Date().nowDateConvertStr, message: text))
             
             messageTextView.text = nil
+            
+            if let font = messageTextView.font {
+                let size = CGSize(width: messageTextView.frame.width, height: font.lineHeight)
+                let estimatedSize = messageTextView.sizeThatFits(size)
+                
+                messageTextView.constraints.forEach { constraint in
+                    
+                    if constraint.firstAttribute == .height {
+                        
+                        constraint.constant = estimatedSize.height
+                    }
+                }
+            }
         }
     }
 }
@@ -98,26 +118,32 @@ extension ChattingRoomViewController {
     private func configureKeyboardNotification() {
         
         // NotificationCenter를 통해 키보드 이벤트 등록
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, 
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self, 
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     
     @objc
     private func keyboardWillShow(_ notification: NSNotification) {
-        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+//        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+//        
+//        let keyboardHeight = keyboardFrame.cgRectValue.height
         
-        let keyboardHeight = keyboardFrame.cgRectValue.height
-        
-        if view.frame.origin.y == 0 {
-            view.frame.origin.y -= keyboardHeight
-        }
+//        if view.frame.origin.y == 0 {
+//            view.frame.origin.y -= keyboardHeight
+//        }
     }
     
     @objc
     private func keyboardWillHide(_ notification: NSNotification) {
-        if view.frame.origin.y != 0 {
-            view.frame.origin.y = 0
-        }
+//        if view.frame.origin.y != 0 {
+//            view.frame.origin.y = 0
+//        }
     }
 }
 
@@ -172,6 +198,25 @@ extension ChattingRoomViewController: UITextViewDelegate {
             textView.textColor = .systemGray
         }
     }
+    
+    // textView의 contents가 3줄을 초과하는 경우 scroll 할 수 있게 바꿔서
+    // 더 이상 textView가 늘어나지 않도록 변경
+    func textViewDidChange(_ textView: UITextView) {
+        guard let font = textView.font else { return }
+
+        let size = CGSize(width: textView.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        let numberOfLines = Int(estimatedSize.height / font.lineHeight)
+        
+        textView.constraints.forEach { constraint in
+            
+            if constraint.firstAttribute == .height && numberOfLines <= 3 {
+                constraint.constant = estimatedSize.height
+            } else if numberOfLines > 3 {
+                messageTextView.isScrollEnabled = true
+            }
+        }
+    }
 }
 
 extension ChattingRoomViewController: UITableViewDelegate { }
@@ -185,11 +230,19 @@ extension ChattingRoomViewController: UITableViewDataSource {
         chatTableView.rowHeight = UITableView.automaticDimension
         chatTableView.keyboardDismissMode = .onDrag
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+        chatTableView.addGestureRecognizer(tapGestureRecognizer)
+        
         let receptionNib = UINib(nibName: ReceptionMessageTableViewCell.identifier, bundle: nil)
         chatTableView.register(receptionNib, forCellReuseIdentifier: ReceptionMessageTableViewCell.identifier)
         
         let outgoingNib = UINib(nibName: OutgoingMessageTableViewCell.identifier, bundle: nil)
         chatTableView.register(outgoingNib, forCellReuseIdentifier: OutgoingMessageTableViewCell.identifier)
+    }
+    
+    @objc
+    private func tableViewTapped() {
+        messageTextView.resignFirstResponder()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -225,17 +278,5 @@ extension ChattingRoomViewController: UITableViewDataSource {
         cell.configureCellContents(chat)
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        // 마지막 셀이 보여지게 되면 마지막 셀의 bottom으로 scroll을 이동
-        if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
-            
-            if indexPath == lastVisibleIndexPath {
-                
-                tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-            }
-        }
     }
 }
