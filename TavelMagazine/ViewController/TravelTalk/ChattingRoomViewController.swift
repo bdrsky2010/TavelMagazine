@@ -37,7 +37,7 @@ final class ChattingRoomViewController: UIViewController {
     public var chatRoom: ChatRoom? {
         
         didSet {
-            if let chatRoom, let chatTableView, let row {
+            if let chatRoom, let chatTableView {
                 chatTableView.reloadData()
                 chatTableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count - 1, section: 0), at: .bottom, animated: true)
                 
