@@ -35,7 +35,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-jH-tQa" userLabel="DateLabel">
-                        <rect key="frame" x="254" y="15.666666666666664" width="42" height="21"/>
+                        <rect key="frame" x="231" y="15.666666666666664" width="65" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="6k1-S6-pTc"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
