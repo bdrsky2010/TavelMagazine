@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MultiChattingRoomTableViewCell: UITableViewCell {
+final class MultiChattingRoomTableViewCell: UITableViewCell {
 
     @IBOutlet var profileImageViewList: [UIImageView]!
     

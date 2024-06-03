@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class MagazineTableViewCell: UITableViewCell {
+final class MagazineTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var infoImageView: UIImageView!

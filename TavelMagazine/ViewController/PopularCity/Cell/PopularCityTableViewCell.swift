@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class PopularCityTableViewCell: UITableViewCell {
+final class PopularCityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak var cellView: UIView!

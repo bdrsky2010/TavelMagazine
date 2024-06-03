@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OutgoingMessageTableViewCell: UITableViewCell {
+final class OutgoingMessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TouristSpotViewController: UIViewController {
+final class TouristSpotViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var topNicknameLabel: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TravelTalkViewController: UIViewController {
+final class TravelTalkViewController: UIViewController {
 
     @IBOutlet weak var userChattingRoomSearchBar: UISearchBar! {
         
@@ -55,7 +55,26 @@ class TravelTalkViewController: UIViewController {
     
 }
 
-extension TravelTalkViewController: UITableViewDelegate { }
+extension TravelTalkViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let index = indexPath.row
+        let chatRoom = filteredChatRoomList[index]
+        
+        let identifier = ChattingRoomViewController.identifier
+        
+        let chattingRoomViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! ChattingRoomViewController
+        
+        chattingRoomViewController.chatRoom = chatRoom
+        chattingRoomViewController.row = index
+        chattingRoomViewController.delegate = self
+        
+        navigationController?.pushViewController(chattingRoomViewController, animated: true)
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+}
 
 extension TravelTalkViewController: UITableViewDataSource {
     
@@ -105,23 +124,6 @@ extension TravelTalkViewController: UITableViewDataSource {
         cell.configureContents(chatRoom)
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = indexPath.row
-        let chatRoom = filteredChatRoomList[index]
-        
-        let identifier = ChattingRoomViewController.identifier
-        
-        let chattingRoomViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! ChattingRoomViewController
-        
-        chattingRoomViewController.chatRoom = chatRoom
-        chattingRoomViewController.row = index
-        chattingRoomViewController.delegate = self
-        
-        navigationController?.pushViewController(chattingRoomViewController, animated: true)
-        
-        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 

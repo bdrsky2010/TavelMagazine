@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MagazineViewController: UIViewController {
+final class MagazineViewController: UIViewController {
 
     @IBOutlet weak var magazineTableView: UITableView!
     

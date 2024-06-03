@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChattingRoomViewController: UIViewController {
+final class ChattingRoomViewController: UIViewController {
 
     @IBOutlet weak var messageTextViewBackgroundView: UIView!
     

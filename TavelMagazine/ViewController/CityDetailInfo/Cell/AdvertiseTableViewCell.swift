@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AdvertiseTableViewCell: UITableViewCell {
+final class AdvertiseTableViewCell: UITableViewCell {
     
     @IBOutlet weak var adCellView: UIView!
     @IBOutlet weak var adTitleView: UIView!

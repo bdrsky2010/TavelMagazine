@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityDetailInfoViewController: UIViewController {
+final class CityDetailInfoViewController: UIViewController {
     
     @IBOutlet weak var cityTableView: UITableView!
     

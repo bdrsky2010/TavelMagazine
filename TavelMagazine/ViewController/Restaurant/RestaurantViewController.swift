@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class RestaurantViewController: UIViewController {
+final class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var filterTextField: UITextField!
     @IBOutlet weak var textFieldCoverView: UIView!

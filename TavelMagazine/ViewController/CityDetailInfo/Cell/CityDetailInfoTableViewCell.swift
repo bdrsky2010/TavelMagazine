@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class CityDetailInfoTableViewCell: UITableViewCell {
+final class CityDetailInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!

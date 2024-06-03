@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PopularCityViewController: UIViewController {
+final class PopularCityViewController: UIViewController {
 
     @IBOutlet weak var popularCityTableView: UITableView!
     @IBOutlet weak var domesticSegmentedControl: UISegmentedControl!

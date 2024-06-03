@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AdvertiseViewController: UIViewController {
+final class AdvertiseViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
