@@ -67,7 +67,7 @@ extension TravelTalkViewController: UITableViewDelegate {
         let chattingRoomViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! ChattingRoomViewController
         
         chattingRoomViewController.chatRoom = chatRoom
-        chattingRoomViewController.row = index
+        
         chattingRoomViewController.delegate = self
         
         navigationController?.pushViewController(chattingRoomViewController, animated: true)
@@ -148,8 +148,13 @@ extension TravelTalkViewController: UISearchBarDelegate {
 
 extension TravelTalkViewController: TravelTalkDelegate {
     
-    public func sendMessage(_ row: Int, chatRoom: ChatRoom) {
+    public func sendMessage(_ chatRoom: ChatRoom) {
         
-        chatRoomList[row] = chatRoom
+        for i in 0..<chatRoomList.count {
+            
+            if chatRoomList[i].chatroomId == chatRoom.chatroomId {
+                chatRoomList[i] = chatRoom
+            }
+        }
     }
 }

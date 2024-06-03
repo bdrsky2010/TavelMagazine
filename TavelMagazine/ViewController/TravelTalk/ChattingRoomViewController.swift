@@ -34,7 +34,6 @@ final class ChattingRoomViewController: UIViewController {
     private let placeholder = "message"
     
     public var delegate: TravelTalkDelegate?
-    public var row: Int?
     public var chatRoom: ChatRoom? {
         
         didSet {
@@ -42,7 +41,7 @@ final class ChattingRoomViewController: UIViewController {
                 chatTableView.reloadData()
                 chatTableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count - 1, section: 0), at: .bottom, animated: true)
                 
-                delegate?.sendMessage(row, chatRoom: chatRoom)
+                delegate?.sendMessage(chatRoom)
             }
         }
     }
