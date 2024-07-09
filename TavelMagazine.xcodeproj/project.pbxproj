@@ -49,6 +49,8 @@
 		7B6CC5AD2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */; };
 		7B6CC5B02C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */; };
 		7B6CC5B12C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */; };
+		7B807F822C3D21A000001F2E /* PopularCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B807F812C3D21A000001F2E /* PopularCityViewModel.swift */; };
+		7B807F842C3D21C900001F2E /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B807F832C3D21C900001F2E /* Observable.swift */; };
 		7BBED3622C035DDF0095FA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3612C035DDF0095FA9F /* AppDelegate.swift */; };
 		7BBED3642C035DDF0095FA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */; };
 		7BBED3662C035DDF0095FA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED3652C035DDF0095FA9F /* ViewController.swift */; };
@@ -106,6 +108,8 @@
 		7B6CC5AC2C04AB2600FBFF21 /* CityDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
 		7B6CC5AE2C04AB6A00FBFF21 /* AdvertiseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiseTableViewCell.swift; sourceTree = "<group>"; };
 		7B6CC5AF2C04AB6A00FBFF21 /* AdvertiseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertiseTableViewCell.xib; sourceTree = "<group>"; };
+		7B807F812C3D21A000001F2E /* PopularCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewModel.swift; sourceTree = "<group>"; };
+		7B807F832C3D21C900001F2E /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		7BBED35E2C035DDF0095FA9F /* TavelMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TavelMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBED3612C035DDF0095FA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BBED3632C035DDF0095FA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,8 +178,10 @@
 		7B5C12AF2C0717820096DE9E /* PopularCity */ = {
 			isa = PBXGroup;
 			children = (
+				7B807F7E2C3D212700001F2E /* Model */,
+				7B807F802C3D216100001F2E /* View */,
+				7B807F7F2C3D215E00001F2E /* ViewModel */,
 				7B5C12E22C0C56570096DE9E /* Cell */,
-				7B5C12B02C0717A40096DE9E /* PopularCityViewController.swift */,
 			);
 			path = PopularCity;
 			sourceTree = "<group>";
@@ -262,7 +268,6 @@
 				7B5C12C62C087AF60096DE9E /* Restaurant.swift */,
 				7BBED3772C035E320095FA9F /* MagazineInfo.swift */,
 				7B6CC5A82C04A95B00FBFF21 /* TravelModel.swift */,
-				7B5C12AB2C0716960096DE9E /* CityInfo.swift */,
 				7B5C12E92C0C5D580096DE9E /* ChattingData.swift */,
 			);
 			path = Model;
@@ -293,6 +298,30 @@
 				7B5C13032C0CCDBB0096DE9E /* Date+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7B807F7E2C3D212700001F2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C12AB2C0716960096DE9E /* CityInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B807F7F2C3D215E00001F2E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B807F812C3D21A000001F2E /* PopularCityViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B807F802C3D216100001F2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C12B02C0717A40096DE9E /* PopularCityViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7BBED3552C035DDF0095FA9F = {
@@ -326,6 +355,7 @@
 				7B6CC5A12C04A52C00FBFF21 /* ViewController */,
 				7B6CC5B22C04CF5E00FBFF21 /* Extension */,
 				7B5C12A62C0707080096DE9E /* Protocol */,
+				7B807F832C3D21C900001F2E /* Observable.swift */,
 			);
 			path = TavelMagazine;
 			sourceTree = "<group>";
@@ -421,9 +451,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B807F842C3D21C900001F2E /* Observable.swift in Sources */,
 				7B5C12C72C087AF60096DE9E /* Restaurant.swift in Sources */,
 				7B5C12AA2C07121E0096DE9E /* UINavigationController+.swift in Sources */,
 				7B6CC5972C04977300FBFF21 /* MagazineViewController.swift in Sources */,
+				7B807F822C3D21A000001F2E /* PopularCityViewModel.swift in Sources */,
 				7B6CC5AB2C04AAC500FBFF21 /* CityDetailInfoTableViewCell.swift in Sources */,
 				7B5C12B12C0717A40096DE9E /* PopularCityViewController.swift in Sources */,
 				7B5C12F62C0C63430096DE9E /* ReuseIdentifierProtocol.swift in Sources */,
