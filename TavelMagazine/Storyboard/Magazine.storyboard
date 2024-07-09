@@ -97,6 +97,7 @@
         <!--Magazine View Controller-->
         <scene sceneID="Nyx-Ld-L9X">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7g-CF-hwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="krk-pD-Eea" customClass="MagazineViewController" customModule="TavelMagazine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NT8-Cx-yej">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -121,7 +122,6 @@
                         <outlet property="magazineTableView" destination="yzq-4X-pjf" id="MKl-kU-wXJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L7g-CF-hwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237" y="65"/>
         </scene>
@@ -149,7 +149,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
